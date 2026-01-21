@@ -65,7 +65,7 @@ const TestimonialsSection = () => {
         </motion.div>
 
         {/* Stacked Cards Container */}
-        <div className="relative w-full max-w-3xl h-[300px] flex items-center justify-center mb-8">
+        <div className="relative w-full max-w-3xl h-[450px] md:h-[350px] flex items-center justify-center mb-8">
 
           {/* Background Card 2 (Bottom) */}
           <motion.div
@@ -86,16 +86,16 @@ const TestimonialsSection = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className={`relative w-full md:w-[95%] h-full rounded-[24px] p-8 md:p-12 flex flex-col justify-center gap-6 shadow-2xl z-20 transition-colors duration-500`}
+            className={`relative w-full md:w-[95%] h-full rounded-[24px] p-6 md:p-12 flex flex-col justify-center gap-6 shadow-2xl z-20 transition-colors duration-500`}
             style={{ backgroundColor: mainColor.bg }}
           >
             {/* Content - Full Width (No Image) */}
             <div className={`flex-1 ${mainColor.text} flex flex-col justify-between`}>
-              <div className={`w-8 h-8 rounded-full ${mainColor.dotBg} flex items-center justify-center mb-4`}>
+              <div className={`w-8 h-8 rounded-full ${mainColor.dotBg} flex items-center justify-center mb-4 mx-auto`}>
                 <div className={`w-4 h-4 ${mainColor.dot} rounded-full`} />
               </div>
 
-              <p className="font-display text-xl md:text-2xl leading-relaxed font-medium text-center mx-auto">
+              <p className="font-display text-lg md:text-2xl leading-relaxed font-medium text-center mx-auto">
                 "{current.quote}"
               </p>
 
