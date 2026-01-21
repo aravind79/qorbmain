@@ -95,7 +95,7 @@ const TestimonialsSection = () => {
                 <div className={`w-4 h-4 ${mainColor.dot} rounded-full`} />
               </div>
 
-              <p className="font-display text-xl md:text-2xl leading-relaxed font-medium">
+              <p className="font-display text-xl md:text-2xl leading-relaxed font-medium text-center mx-auto">
                 "{current.quote}"
               </p>
 

@@ -31,21 +31,9 @@ const Footer = () => {
   const offices = [
     {
       country: '🇮🇳 India',
-      city: 'Bangalore, India',
-      phone: '+91-XXXX-XXXXXX',
-      email: 'india@qorb.tech',
-    },
-    {
-      country: '🇦🇪 UAE',
-      city: 'Dubai, UAE',
-      phone: '+971-XX-XXX-XXXX',
-      email: 'uae@qorb.tech',
-    },
-    {
-      country: '🇺🇸 USA',
-      city: 'Remote Team',
-      phone: '',
-      email: 'usa@qorb.tech',
+      city: 'The Atomic, Near Technopark Phase 1, Kazhakootam, 695582, Trivandrum, Kerala.',
+      phone: '+91 79070 21813',
+      email: 'hello@qorb.tech',
     },
   ];
 
@@ -169,12 +157,8 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-primary-foreground/60 text-sm">
-            © 2026 QORB. All rights reserved.
-          </p>
-          <p className="text-primary-foreground/60 text-sm flex items-center gap-1">
-            Built with <span className="text-red-400">❤️</span> using AI
-          </p>
+          © 2026 Qorb Copyright. All rights reserved.
+
         </div>
       </div>
     </footer>

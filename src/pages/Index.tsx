@@ -12,6 +12,9 @@ import CTASection from '@/components/sections/CTASection';
 import IndustriesSection from '@/components/sections/IndustriesSection';
 import SmoothFollower from '@/components/effects/SmoothFollower';
 
+import ClientsMarquee from '@/components/sections/ClientsMarquee';
+import OurWorkSection from '@/components/sections/OurWorkSection';
+
 const Index = () => {
   useEffect(() => {
     const lenis = new Lenis({
@@ -40,7 +43,9 @@ const Index = () => {
       <Header />
       <main className="relative">
         <HeroSection />
+        <ClientsMarquee />
         <ServicesSection />
+        <OurWorkSection />
         <WhyChooseSection />
         <IndustriesSection />
         <StatsSection />

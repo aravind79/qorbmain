@@ -48,22 +48,23 @@ const StackingCard = ({ service, index, progress, range, targetScale }: Stacking
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-0"
+      className="h-screen flex items-start justify-center sticky top-0 pt-12 lg:pt-24"
     >
       <motion.div
         style={{
           scale,
-          top: `calc(10vh + ${index * 30}px)`,
-        }}
+          top: `calc(var(--card-index) * var(--card-offset))`,
+          '--card-index': index,
+        } as any}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="flex flex-col lg:flex-row relative h-auto lg:h-[500px] w-[95%] lg:w-[85%] max-w-6xl rounded-3xl overflow-hidden shadow-2xl origin-top"
+        className="flex flex-col lg:flex-row relative h-[70vh] lg:h-[450px] w-[95%] lg:w-[85%] max-w-6xl rounded-3xl overflow-hidden shadow-2xl origin-top [--card-offset:5px] lg:[--card-offset:20px] lg:max-h-[600px] overflow-y-auto lg:overflow-hidden bg-white"
       >
         {/* Left Side - Content */}
         <motion.div
-          className="flex-1 p-8 lg:p-12 flex flex-col justify-center"
+          className="flex-1 p-5 md:p-8 lg:p-12 flex flex-col justify-center"
           style={{ backgroundColor: color }}
         >
           {/* Badge */}
@@ -81,37 +82,37 @@ const StackingCard = ({ service, index, progress, range, targetScale }: Stacking
           )}
 
           {/* Icon */}
-          <div className="w-14 h-14 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-6">
-            <Icon className="w-7 h-7 text-white" />
+          <div className="w-10 h-10 lg:w-14 lg:h-14 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-3 lg:mb-6">
+            <Icon className="w-5 h-5 lg:w-7 lg:h-7 text-white" />
           </div>
 
           {/* Title */}
-          <h3 className="font-display text-2xl lg:text-3xl font-bold text-white mb-4">
+          <h3 className="font-display text-lg md:text-2xl lg:text-3xl font-bold text-white mb-2 lg:mb-4">
             {title}
           </h3>
 
           {/* Description */}
-          <p className="text-white/80 text-base lg:text-lg leading-relaxed mb-6">
+          <p className="text-white/80 text-xs md:text-base lg:text-lg leading-relaxed mb-4 lg:mb-6">
             {description}
           </p>
 
           {/* CTAs */}
           {!comingSoon && (
-            <div className="mt-auto flex flex-wrap gap-3 pt-6">
+            <div className="mt-auto flex flex-wrap gap-2 lg:gap-3 pt-2 lg:pt-6">
               <Button
                 variant="secondary"
-                size="lg"
-                className="bg-white text-gray-900 hover:bg-white/90 group/btn border-0"
+                size="sm"
+                className="bg-white text-gray-900 hover:bg-white/90 group/btn border-0 text-xs lg:text-base px-3 py-1.5 h-8 lg:h-11 w-full sm:w-auto"
               >
                 Get Custom Quote
-                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform ml-2" />
+                <ArrowRight className="w-3 h-3 lg:w-4 lg:h-4 group-hover/btn:translate-x-1 transition-transform ml-2" />
               </Button>
               <Button
                 variant="outline"
-                size="lg"
-                className="bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white"
+                size="sm"
+                className="bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white text-xs lg:text-base px-3 py-1.5 h-8 lg:h-11 w-full sm:w-auto"
               >
-                <Calendar className="w-4 h-4 mr-2" />
+                <Calendar className="w-3 h-3 lg:w-4 lg:h-4 mr-2" />
                 Book Consultation
               </Button>
             </div>
@@ -119,40 +120,40 @@ const StackingCard = ({ service, index, progress, range, targetScale }: Stacking
         </motion.div>
 
         {/* Right Side - Features & Visual */}
-        <div className="flex-1 bg-white p-8 lg:p-12 flex flex-col justify-center">
-          <h4 className="font-display text-lg font-semibold text-gray-900 mb-6">
+        <div className="flex-1 bg-white p-5 md:p-8 lg:p-12 flex flex-col justify-center">
+          <h4 className="font-display text-sm lg:text-lg font-semibold text-gray-900 mb-2 lg:mb-6">
             What's Included
           </h4>
 
-          <motion.ul className="space-y-4" style={{ scale: imageScale }}>
+          <motion.ul className="space-y-3 lg:space-y-4" style={{ scale: imageScale }}>
             {features.map((feature, idx) => (
-              <li key={idx} className="flex items-start gap-3">
+              <li key={idx} className="flex items-start gap-2 lg:gap-3">
                 <div
-                  className="w-6 h-6 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0"
+                  className="w-4 h-4 lg:w-6 lg:h-6 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0"
                   style={{ backgroundColor: `${color}20` }}
                 >
                   <div
-                    className="w-2 h-2 rounded-full"
+                    className="w-1 h-1 lg:w-2 lg:h-2 rounded-full"
                     style={{ backgroundColor: color }}
                   />
                 </div>
-                <span className="text-gray-700 text-lg">{feature}</span>
+                <span className="text-gray-700 text-xs md:text-base lg:text-lg">{feature}</span>
               </li>
             ))}
           </motion.ul>
 
           {/* Additional Visual Element */}
-          <div className="mt-8 p-6 rounded-2xl bg-gray-50 border border-gray-100">
+          <div className="mt-6 lg:mt-8 p-4 lg:p-6 rounded-2xl bg-gray-50 border border-gray-100 hidden md:block">
             <div className="flex items-center gap-4">
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center"
+                className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl flex items-center justify-center"
                 style={{ backgroundColor: `${color}15` }}
               >
-                <Icon className="w-6 h-6" style={{ color }} />
+                <Icon className="w-5 h-5 lg:w-6 lg:h-6" style={{ color }} />
               </div>
               <div>
-                <div className="font-semibold text-gray-900">Ready to Start?</div>
-                <div className="text-sm text-gray-500">Free consultation included</div>
+                <div className="font-semibold text-gray-900 text-sm lg:text-base">Ready to Start?</div>
+                <div className="text-xs lg:text-sm text-gray-500">Free consultation included</div>
               </div>
             </div>
           </div>

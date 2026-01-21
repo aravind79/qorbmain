@@ -21,7 +21,7 @@ const Counter = ({ end, suffix = '', duration = 2 }: CounterProps) => {
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
-      
+
       // Easing function for smooth animation
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       setCount(Math.floor(easeOutQuart * end));
@@ -47,17 +47,17 @@ const StatsSection = () => {
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   const stats = [
-    { value: 200, suffix: '+', label: 'Projects Delivered', sublabel: 'Across 3 continents' },
-    { value: 50, suffix: '+', label: 'AI Solutions Built', sublabel: 'Chatbots & automation' },
+    { value: 30, suffix: '+', label: 'Projects Delivered', sublabel: 'Across 3 countries' },
     { value: 70, suffix: '%', label: 'Average Cost Savings', sublabel: 'Through automation' },
-    { value: 98, suffix: '%', label: 'Client Satisfaction', sublabel: '5-star rated' },
+    { value: 10, suffix: '+', label: 'AI Solutions Built', sublabel: 'Chatbots & automation' },
+    { value: 100, suffix: '%', label: 'Client Satisfaction', sublabel: '5-star rated' },
   ];
 
   return (
     <section ref={sectionRef} className="py-20 relative overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-dark" />
-      
+
       {/* Animated Orbs */}
       <motion.div
         initial={{ opacity: 0 }}
