@@ -17,11 +17,11 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Services', href: '#services' },
-    { name: 'Solutions', href: '#solutions' },
-    { name: 'Work', href: '#work' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Services', to: '/#services' },
+    { name: 'Solutions', to: '/#solutions' },
+    { name: 'Work', to: '/work' },
+    { name: 'About', to: '/about' },
+    { name: 'Contact', to: '/contact' },
   ];
 
   return (
@@ -30,8 +30,8 @@ const Header = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? 'glass shadow-soft py-3'
-          : 'bg-transparent py-5'
+        ? 'glass shadow-soft py-3'
+        : 'bg-transparent py-5'
         }`}
     >
       <div className="container-custom">
@@ -52,13 +52,13 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.to}
                 className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-muted/50"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -94,14 +94,14 @@ const Header = () => {
           >
             <nav className="p-4 space-y-1">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.to}
                   className="block px-4 py-3 rounded-lg text-foreground hover:bg-muted/50 transition-colors font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
               <div className="pt-4 px-4">
                 <Button variant="gradient" className="w-full">
