@@ -64,9 +64,11 @@ const Header = () => {
 
           {/* Right Side */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button variant="gradient" size="default">
-              Get Started
-            </Button>
+            <Link to="/contact">
+              <Button variant="gradient" size="default" className="shadow-lg hover:shadow-xl transition-shadow">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -104,9 +106,11 @@ const Header = () => {
                 </Link>
               ))}
               <div className="pt-4 px-4">
-                <Button variant="gradient" className="w-full">
-                  Get Started
-                </Button>
+                <Link to="/contact" className="block">
+                  <Button variant="gradient" className="w-full shadow-lg">
+                    Get Started
+                  </Button>
+                </Link>
               </div>
             </nav>
           </motion.div>
