@@ -11,9 +11,10 @@ import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CTASection from '@/components/sections/CTASection';
 import IndustriesSection from '@/components/sections/IndustriesSection';
 import SmoothFollower from '@/components/effects/SmoothFollower';
-
 import ClientsMarquee from '@/components/sections/ClientsMarquee';
 import OurWorkSection from '@/components/sections/OurWorkSection';
+import SEO from '@/components/SEO';
+import { seoMetadata } from '@/lib/content';
 
 const Index = () => {
   useEffect(() => {
@@ -37,6 +38,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background relative">
+      <SEO
+        title={seoMetadata.home.title}
+        description={seoMetadata.home.description}
+        keywords={seoMetadata.home.keywords}
+      />
       {/* Smooth Cursor Follower - Desktop Only */}
       <SmoothFollower />
 

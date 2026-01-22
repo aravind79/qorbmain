@@ -61,7 +61,7 @@ const Services = () => {
         <>
             <Helmet>
                 <title>Our Services | QORB</title>
-                <meta name="description" content="Comprehensive technical services including AI, Web Development, and Mobile Apps." />
+                <meta name="description" content="Comprehensive technology services including AI Solutions, Web Development, Mobile Apps, MVP Development, Cybersecurity, and SaaS. Serving India, USA & UAE." />
             </Helmet>
             <Header />
             <main className="pt-32 pb-20 min-h-screen">
@@ -69,8 +69,22 @@ const Services = () => {
                     <div className="mb-20 text-center max-w-3xl mx-auto">
                         <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">Our Services</h1>
                         <p className="text-xl text-muted-foreground">
-                            We deliver cutting-edge digital solutions tailored to your unique business needs.
+                            We deliver cutting-edge digital solutions tailored to your unique business needs across India, USA, and UAE.
                         </p>
+                        <div className="flex flex-wrap justify-center gap-4 mt-8 text-sm text-muted-foreground">
+                            <div className="flex items-center gap-2">
+                                <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                                <span>100+ Projects Delivered</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                                <span>Global Presence</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                                <span>24/7 Support</span>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

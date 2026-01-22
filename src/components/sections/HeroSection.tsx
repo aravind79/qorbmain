@@ -60,11 +60,32 @@ const HeroSection = () => {
               That adapts and learns your business needs for personalized solutions.
             </motion.p>
 
+            {/* Trust Indicators */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.25 }}
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-6 sm:mb-8 text-xs sm:text-sm text-muted-foreground"
+            >
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                <span>Trusted by 100+ businesses</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                <span>India • USA • UAE</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                <span>98% Satisfaction</span>
+              </div>
+            </motion.div>
+
             {/* CTAs */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.3 }}
+              transition={{ duration: 0.4, delay: 0.35 }}
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4"
             >
               <Button
@@ -87,7 +108,7 @@ const HeroSection = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.4 }}
+              transition={{ duration: 0.4, delay: 0.45 }}
               className="flex flex-wrap justify-center lg:hidden gap-2 mt-8"
             >
               {['AI Automation', 'MVP Dev', 'SaaS', 'Web Apps', 'Mobile'].map((tag, i) => (

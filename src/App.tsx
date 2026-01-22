@@ -15,6 +15,10 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/admin/Login";
 import AdminLayout from "./components/admin/AdminLayout";
 import Dashboard from "./pages/admin/Dashboard";
+import Projects from "./pages/admin/Projects";
+import ServicesAdmin from "./pages/admin/Services";
+import BlogAdmin from "./pages/admin/Blog";
+import Settings from "./pages/admin/Settings";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +43,10 @@ const App = () => (
             <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<Navigate to="/admin/dashboard" replace />} />
               <Route path="dashboard" element={<Dashboard />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="services" element={<ServicesAdmin />} />
+              <Route path="blog" element={<BlogAdmin />} />
+              <Route path="settings" element={<Settings />} />
             </Route>
 
             {/* Catch-all */}

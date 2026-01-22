@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, FolderKanban, FileText, Settings, LogOut, Menu, X, BarChart3 } from 'lucide-react';
+import { LayoutDashboard, FolderKanban, FileText, Settings, LogOut, Menu, X, BarChart3, Code } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
@@ -26,6 +26,7 @@ const AdminLayout = () => {
     const menuItems = [
         { icon: LayoutDashboard, label: 'Analytics', path: '/admin/dashboard' },
         { icon: FolderKanban, label: 'Projects', path: '/admin/projects' },
+        { icon: Code, label: 'Services', path: '/admin/services' },
         { icon: FileText, label: 'Blog Posts', path: '/admin/blog' },
         { icon: Settings, label: 'Settings', path: '/admin/settings' },
     ];
@@ -55,8 +56,8 @@ const AdminLayout = () => {
                                 key={item.path}
                                 to={item.path}
                                 className={`flex items-center gap-3 px-3 py-3 rounded-xl transition-colors ${location.pathname === item.path
-                                        ? 'bg-primary text-white shadow-lg shadow-primary/25'
-                                        : 'text-gray-600 hover:bg-gray-100'
+                                    ? 'bg-primary text-white shadow-lg shadow-primary/25'
+                                    : 'text-gray-600 hover:bg-gray-100'
                                     }`}
                             >
                                 <item.icon className="w-5 h-5 flex-shrink-0" />
