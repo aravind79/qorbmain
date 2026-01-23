@@ -17,9 +17,10 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Services', to: '/#services' },
-    { name: 'Solutions', to: '/#solutions' },
+    { name: 'Home', to: '/' },
+    { name: 'Services', to: '/services' },
     { name: 'Work', to: '/work' },
+    { name: 'Blog', to: '/blog' },
     { name: 'About', to: '/about' },
     { name: 'Contact', to: '/contact' },
   ];
@@ -42,11 +43,8 @@ const Header = () => {
               whileHover={{ scale: 1.05 }}
               className="relative"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center shadow-glow">
-                <span className="text-primary-foreground font-display font-bold text-xl">Q</span>
-              </div>
+              <img src="/logo.png" alt="QORB" className="h-20 md:h-24 w-auto object-contain" />
             </motion.div>
-            <span className="font-display font-bold text-xl text-foreground">QORB</span>
           </Link>
 
           {/* Desktop Navigation */}

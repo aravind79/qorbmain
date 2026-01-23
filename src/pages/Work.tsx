@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -7,7 +8,15 @@ import { seoMetadata } from '@/lib/content';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, MapPin } from 'lucide-react';
 
+import PageBanner from '@/components/layout/PageBanner';
+
 const Work = () => {
+    const [activeCategory, setActiveCategory] = useState("All");
+
+    const filteredProjects = activeCategory === "All"
+        ? workContent.projects
+        : workContent.projects.filter(project => project.category === activeCategory);
+
     return (
         <>
             <SEO
@@ -16,21 +25,16 @@ const Work = () => {
                 keywords={seoMetadata.work.keywords}
             />
             <Header />
-            <main className="pt-32 pb-20 min-h-screen">
-                {/* Hero Section */}
-                <div className="container-custom mb-20">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-                            {workContent.hero.title}
-                        </h1>
-                        <p className="text-xl md:text-2xl text-primary font-semibold mb-6">
-                            {workContent.hero.subtitle}
-                        </p>
-                        <p className="text-lg text-muted-foreground leading-relaxed">
-                            {workContent.hero.description}
-                        </p>
-                    </div>
-                </div>
+
+            <PageBanner
+                title={workContent.hero.title}
+                subtitle={workContent.hero.subtitle}
+                description={workContent.hero.description}
+                badge="Our Portfolio"
+            />
+
+            <main className="pb-20 min-h-screen">
+                {/* Hero Section Removed */}
 
                 {/* Stats Section */}
                 <div className="bg-slate-50 py-16 mb-20">
@@ -53,19 +57,44 @@ const Work = () => {
                     </div>
                 </div>
 
-                {/* Projects Grid */}
+                {/* Filter & Projects Grid */}
                 <div className="container-custom mb-20">
+                    {/* Category Filter */}
+                    <div className="flex flex-wrap justify-center gap-4 mb-16">
+                        {workContent.categories.map((category) => (
+                            <button
+                                key={category}
+                                onClick={() => setActiveCategory(category)}
+                                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === category
+                                    ? 'bg-primary text-primary-foreground shadow-lg scale-105'
+                                    : 'bg-secondary/50 text-muted-foreground hover:bg-secondary hover:text-foreground'
+                                    }`}
+                            >
+                                {category}
+                            </button>
+                        ))}
+                    </div>
+
                     <div className="space-y-16">
-                        {workContent.projects.map((project, idx) => (
+                        {filteredProjects.map((project, idx) => (
                             <div
                                 key={project.id}
                                 className={`grid lg:grid-cols-2 gap-12 items-center ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''
                                     }`}
                             >
-                                {/* Project Image */}
+                                {/* Project Image/GIF */}
                                 <div className={idx % 2 === 1 ? 'lg:order-2' : ''}>
-                                    <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary/10 to-purple-500/10 flex items-center justify-center shadow-lg">
-                                        <span className="text-6xl opacity-20">📊</span>
+                                    <div className="aspect-video rounded-2xl overflow-hidden bg-slate-100 shadow-xl border border-border/50 group">
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                            onError={(e) => {
+                                                const target = e.target as HTMLImageElement;
+                                                target.onerror = null;
+                                                target.src = 'https://placehold.co/600x400?text=Project+Preview';
+                                            }}
+                                        />
                                     </div>
                                 </div>
 

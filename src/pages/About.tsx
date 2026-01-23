@@ -4,7 +4,10 @@ import Footer from '@/components/layout/Footer';
 import { aboutContent } from '@/lib/content';
 import SEO from '@/components/SEO';
 import { seoMetadata } from '@/lib/content';
+import { ContactForm } from '@/components/ui/contact-form';
 import { CheckCircle2, Globe, Users, Target, Heart, Zap } from 'lucide-react';
+import PageBanner from '@/components/layout/PageBanner';
+
 
 const About = () => {
     const iconMap: { [key: string]: any } = {
@@ -23,21 +26,16 @@ const About = () => {
                 keywords={seoMetadata.about.keywords}
             />
             <Header />
-            <main className="pt-32 pb-20 min-h-screen">
-                {/* Hero Section */}
-                <div className="container-custom mb-20">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-                            {aboutContent.hero.title}
-                        </h1>
-                        <p className="text-xl md:text-2xl text-primary font-semibold mb-6">
-                            {aboutContent.hero.subtitle}
-                        </p>
-                        <p className="text-lg text-muted-foreground leading-relaxed">
-                            {aboutContent.hero.description}
-                        </p>
-                    </div>
-                </div>
+
+            <PageBanner
+                title={aboutContent.hero.title}
+                subtitle={aboutContent.hero.subtitle}
+                description={aboutContent.hero.description}
+                badge="About Us"
+            />
+
+            <main className="pb-20 min-h-screen">
+                {/* Hero Section Removed - Replaced by PageBanner */}
 
                 {/* Stats Section */}
                 <div className="bg-slate-50 py-16 mb-20">
@@ -204,6 +202,21 @@ const About = () => {
                                 </p>
                             </div>
                         ))}
+                    </div>
+                </div>
+
+                {/* Contact Section */}
+                <div className="container-custom py-20">
+                    <div className="max-w-2xl mx-auto">
+                        <div className="text-center mb-12">
+                            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+                                Gets in Touch
+                            </h2>
+                            <p className="text-lg text-muted-foreground">
+                                Ready to start your transformation?
+                            </p>
+                        </div>
+                        <ContactForm />
                     </div>
                 </div>
             </main>

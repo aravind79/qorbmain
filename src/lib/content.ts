@@ -51,9 +51,9 @@ export const heroContent = {
         secondary: "Explore Services"
     },
     trustIndicators: [
-        "Trusted by 100+ businesses across India, USA & UAE",
+        "Trusted by 30+ businesses across India, USA & UAE",
         "24/7 Global Support",
-        "98% Client Satisfaction Rate"
+        "100% Client Satisfaction Rate"
     ]
 };
 
@@ -904,7 +904,7 @@ export const aboutContent = {
 
     story: {
         title: "Our Story",
-        content: "Founded in 2020, QORB started with a simple belief: technology should empower businesses, not complicate them. What began as a small team of passionate developers has grown into a global technology partner serving clients across India, USA, and UAE.\n\nWe've helped over 100 businesses transform their operations with AI, build products that users love, and scale from startup to enterprise. Every project teaches us something new, and we bring those learnings to help you succeed."
+        content: "Founded in 2025, QORB started with a simple belief: technology should empower businesses, not complicate them. What began as a small team of passionate developers has grown into a global technology partner serving clients across India, USA, and UAE.\n\nWe've helped over 30+ businesses transform their operations with AI, build products that users love, and scale from startup to enterprise. Every project teaches us something new, and we bring those learnings to help you succeed."
     },
 
     mission: {
@@ -973,12 +973,10 @@ export const aboutContent = {
     },
 
     stats: [
-        { number: "100+", label: "Projects Delivered" },
-        { number: "50+", label: "Happy Clients" },
-        { number: "3", label: "Countries Served" },
-        { number: "98%", label: "Client Satisfaction" },
-        { number: "24/7", label: "Support Available" },
-        { number: "5+", label: "Years Experience" }
+        { number: "30+", label: "Projects Delivered" },
+        { number: "70%", label: "Average Cost Savings" },
+        { number: "10+", label: "AI Solutions Built" },
+        { number: "100%", label: "Client Satisfaction" }
     ],
 
     whyChoose: {
@@ -986,7 +984,7 @@ export const aboutContent = {
         reasons: [
             {
                 title: "Proven Track Record",
-                description: "100+ successful projects across industries. From startups to enterprises, we've delivered results."
+                description: "30+ successful projects across industries. From startups to enterprises, we've delivered results."
             },
             {
                 title: "AI Expertise",
@@ -1019,123 +1017,193 @@ export const workContent = {
         description: "A selection of projects that showcase our passion for design, technology, and solving complex business challenges. From AI automation to mobile apps, we've helped businesses transform and grow."
     },
 
+    categories: ["All", "SaaS", "Shopify", "Web Development", "AI Solutions"],
     projects: [
         {
-            id: "ai-customer-support",
-            title: "AI-Powered Customer Support Platform",
-            client: "E-commerce Company, USA",
+            id: "clearstatement-ai",
+            title: "ClearStatement AI",
+            client: "FinTech Client",
             category: "AI Solutions",
-            description: "Built an intelligent chatbot that handles 80% of customer queries automatically, reducing support costs by 60% while improving response times.",
-            challenge: "High support ticket volume with slow response times affecting customer satisfaction.",
-            solution: "Custom AI chatbot with natural language understanding, integrated with their existing CRM and knowledge base.",
+            description: "Automated bank statement converter using advanced AI to parse and standardize financial documents with high accuracy.",
+            challenge: "Manual data entry from diverse bank statement formats was time-consuming and error-prone.",
+            solution: "Developed an AI-powered parsing engine that automatically recognizes and extracts transaction data from PDF statements.",
             results: [
-                "80% of queries resolved automatically",
-                "60% reduction in support costs",
-                "Response time reduced from 4 hours to instant",
-                "Customer satisfaction increased by 35%"
+                "99% extraction accuracy",
+                "Reduced processing time by 90%",
+                "Supports 50+ bank formats",
+                "Seamless export to Excel/CSV"
             ],
-            technologies: ["OpenAI GPT-4", "Python", "FastAPI", "React", "PostgreSQL"],
-            image: "ai-support.jpg",
+            technologies: ["Python", "Machine Learning", "OCR", "React"],
+            image: "/work/ClearStatement AI Bank Statement Converter.gif",
             testimonial: {
-                quote: "QORB transformed our customer support. The AI chatbot handles most queries instantly, and our team can focus on complex issues.",
-                author: "Sarah Johnson",
-                position: "Head of Customer Success"
+                quote: "Drastically reduced our manual workload. The accuracy is impressive.",
+                author: "Finance Manager",
+                position: "CFO",
+                company: "FinTech Corp"
             }
         },
         {
-            id: "saas-analytics",
-            title: "SaaS Analytics Platform",
-            client: "Tech Startup, India",
-            category: "SaaS Development",
-            description: "Developed a complete SaaS platform for business analytics with real-time dashboards, custom reports, and multi-tenant architecture.",
-            challenge: "Needed to launch quickly to compete in crowded market while ensuring scalability.",
-            solution: "Built MVP in 8 weeks with core features, then iterated based on user feedback. Scalable architecture from day one.",
+            id: "jewelsmuse-saas",
+            title: "JewelsMuse Rental SaaS",
+            client: "JewelsMuse",
+            category: "SaaS",
+            description: "A comprehensive rental management platform for jewelry businesses, handling inventory, billing, and customer tracking.",
+            challenge: "Managing jewelry rentals manually involved complex tracking of inventory statuses and billing cycles.",
+            solution: "Built a cloud-based SaaS platform with real-time inventory tracking, automated billing, and rental scheduling.",
             results: [
-                "Launched in 8 weeks",
-                "Acquired 500+ customers in first 6 months",
-                "Handles 10,000+ daily active users",
-                "Raised seed funding based on product traction"
+                "Automated recurring billing",
+                "Real-time inventory status",
+                "Reduced loss/theft by 40%",
+                "Integrated CRM"
             ],
-            technologies: ["Next.js", "Node.js", "PostgreSQL", "Redis", "AWS", "Stripe"],
-            image: "saas-platform.jpg"
+            technologies: ["React", "Node.js", "MongoDB", "AWS"],
+            image: "/work/JewelsMuse Rental Management SaaS.gif"
         },
         {
-            id: "mobile-fitness",
-            title: "Fitness & Wellness Mobile App",
-            client: "Health & Wellness Company, UAE",
-            category: "Mobile App Development",
-            description: "Created a cross-platform mobile app for fitness tracking, meal planning, and personal training with 50K+ downloads.",
-            challenge: "Needed native-like performance on both iOS and Android with offline capabilities.",
-            solution: "Built with React Native for cross-platform efficiency, with offline-first architecture and wearable integration.",
+            id: "zaasho-shopify",
+            title: "Zaasho Dropshipping",
+            client: "Zaasho",
+            category: "Shopify",
+            description: "High-conversion Shopify store designed for global dropshipping operations with optimized product pages and checkout.",
+            challenge: "Low conversion rates and slow page load times were affecting ad spend efficiency.",
+            solution: "Custom Shopify theme development focused on speed, mobile responsiveness, and conversion rate optimization (CRO).",
             results: [
-                "50,000+ downloads in 6 months",
-                "4.8 star rating on app stores",
-                "Featured on App Store in UAE",
-                "30% monthly active user retention"
+                "2x increase in conversion rate",
+                "Sub-second page load speeds",
+                "Seamless multi-currency support",
+                "Automated order fulfillment"
             ],
-            technologies: ["React Native", "Firebase", "GraphQL", "HealthKit", "Google Fit"],
-            image: "fitness-app.jpg"
+            technologies: ["Shopify Liquid", "JavaScript", "Tailwind CSS"],
+            image: "/work/Zaasho Shopify Dropshipping Store.gif"
         },
         {
-            id: "ecommerce-platform",
-            title: "Multi-Vendor E-Commerce Platform",
-            client: "Retail Business, India",
+            id: "document-alchemist",
+            title: "Document Alchemist",
+            client: "SaaS Startup",
+            category: "SaaS",
+            description: "Web-based PDF editor and document management studio allowing users to merge, split, and edit PDFs in the browser.",
+            challenge: "Users needed a lightweight, secure alternative to heavy desktop PDF software.",
+            solution: "Created a browser-native PDF manipulation tool using WebAssembly for fast, secure client-side processing.",
+            results: [
+                "Zero server-side data storage",
+                "Lightning-fast processing",
+                "Intuitive drag-and-drop UI",
+                "Freemium subscription model"
+            ],
+            technologies: ["WebAssembly", "React", "Next.js", "Stripe"],
+            image: "/work/Document Alchemist Studio (PDF Editor SaaS).gif"
+        },
+        {
+            id: "myflav-foods",
+            title: "MyFlav Business Suite",
+            client: "MyFlav Foods",
+            category: "SaaS",
+            description: "End-to-end business management SaaS for the food industry, covering supply chain, orders, and distribution.",
+            challenge: "Fragmented systems for inventory and orders led to stockouts and delivery delays.",
+            solution: "Unified SaaS platform connecting inventory, order management, and logistics in one dashboard.",
+            results: [
+                "30% reduction in food waste",
+                "Real-time order tracking",
+                "Optimized delivery routes",
+                "Centralized supplier management"
+            ],
+            technologies: ["Vue.js", "Firebase", "Node.js"],
+            image: "/work/MyFlav Foods Business Management SaaS.gif"
+        },
+        {
+            id: "jewelsmuse-shopify",
+            title: "JewelsMuse Store",
+            client: "JewelsMuse",
+            category: "Shopify",
+            description: "Premium e-commerce experience for luxury jewelry, featuring high-res galleries and virtual try-on integration.",
+            challenge: "Showcasing high-end jewelry online required a superior visual experience and trust-building elements.",
+            solution: "Designed a luxury-focused Shopify store with custom product filtering, zoom capabilities, and brand storytelling.",
+            results: [
+                "Increased average order value",
+                "Enhanced brand prestige",
+                "Mobile-first luxury design",
+                "Integrated loyalty program"
+            ],
+            technologies: ["Shopify Plus", "Liquid", "SCSS"],
+            image: "/work/JewelsMuse Shopify Store.gif"
+        },
+        {
+            id: "mj-adworks",
+            title: "MJ Adworks Website",
+            client: "MJ Adworks",
             category: "Web Development",
-            description: "Built a complete e-commerce marketplace connecting vendors and customers with payments, inventory, and logistics integration.",
-            challenge: "Complex multi-vendor system with Indian payment gateways and logistics partners.",
-            solution: "Custom-built platform with vendor dashboard, customer app, and admin panel. Integrated with Razorpay, Shiprocket, and SMS gateways.",
+            description: "Corporate website for a digital advertising agency, showcasing their portfolio and services with dynamic animations.",
+            challenge: "The agency needed a website that reflected their creativity and modern design sensibilities.",
+            solution: "Developed a visually striking website with GSAP animations, smooth scrolling, and an interactive portfolio section.",
             results: [
-                "100+ vendors onboarded",
-                "₹50L+ monthly GMV",
-                "99.9% uptime",
-                "Seamless payment and shipping experience"
+                "Award-winning design",
+                "Increased client inquiries",
+                "Fast performance metrics",
+                "Easy-to-update CMS"
             ],
-            technologies: ["React", "Node.js", "MongoDB", "Razorpay", "AWS", "Redis"],
-            image: "ecommerce.jpg"
+            technologies: ["React", "GSAP", "Tailwind CSS"],
+            image: "/work/MJ Adworks Website Development.gif"
         },
         {
-            id: "security-audit",
-            title: "Enterprise Security Audit & Remediation",
-            client: "Financial Services, USA",
-            category: "Cyber Security",
-            description: "Conducted comprehensive security audit and implemented fixes for a fintech platform handling sensitive financial data.",
-            challenge: "Needed SOC2 compliance for enterprise clients but had multiple security vulnerabilities.",
-            solution: "Full security assessment, penetration testing, and remediation of all critical and high-risk vulnerabilities.",
+            id: "driving-school",
+            title: "Driving School Portal",
+            client: "City Driving School",
+            category: "Web Development",
+            description: "Online booking and management portal for a driving school, allowing students to schedule lessons and track progress.",
+            challenge: "Phone-based scheduling was inefficient and led to double bookings.",
+            solution: "Implemented a self-service booking system with instructor calendar sync and automated SMS reminders.",
             results: [
-                "Achieved SOC2 Type II certification",
-                "Fixed 47 security vulnerabilities",
-                "Implemented automated security monitoring",
-                "Passed enterprise client security reviews"
+                "Eliminated scheduling conflicts",
+                "Reduced admin time by 70%",
+                "Improved student experience",
+                "Mobile-friendly booking"
             ],
-            technologies: ["OWASP", "Burp Suite", "AWS Security", "Encryption", "OAuth 2.0"],
-            image: "security.jpg"
+            technologies: ["WordPress", "PHP", "MySQL"],
+            image: "/work/Driving School Website.gif"
         },
         {
-            id: "mvp-booking",
-            title: "Appointment Booking MVP",
-            client: "Healthcare Startup, UAE",
-            category: "MVP Development",
-            description: "Rapid MVP development for doctor appointment booking platform, launched in 6 weeks to validate market demand.",
-            challenge: "Needed to launch quickly to test market before competitors.",
-            solution: "Built focused MVP with core booking features, payment integration, and SMS notifications in 6-week sprint.",
+            id: "elkua-billing",
+            title: "Elkua Billing Soft",
+            client: "Elkua Global",
+            category: "SaaS",
+            description: "Robust billing and invoicing software tailored for global businesses with multi-currency and tax support.",
+            challenge: "Complex international billing requirements made standard software insufficient.",
+            solution: "Developed a custom billing engine capable of handling complex tax rules and multi-currency invoicing.",
             results: [
-                "Launched in 6 weeks",
-                "1,000+ appointments booked in first month",
-                "Validated product-market fit",
-                "Secured seed funding based on traction"
+                "Compliant with global tax laws",
+                "Automated invoice generation",
+                "Client portal integration",
+                "Recurring billing support"
             ],
-            technologies: ["Next.js", "Supabase", "Stripe", "Twilio", "Vercel"],
-            image: "booking-mvp.jpg"
+            technologies: ["Angular", ".NET Core", "Azure"],
+            image: "/work/Elkua Global Billing Software.gif"
+        },
+        {
+            id: "rental-billing",
+            title: "Rental & Billing Sys",
+            client: "Property Managers",
+            category: "SaaS",
+            description: "Specialized SaaS for property rental management and tenant billing, streamlining the leasing lifecycle.",
+            challenge: "Property managers struggled with manual rent collection and lease tracking.",
+            solution: "Created an all-in-one platform for lease management, automated rent reminders, and online payments.",
+            results: [
+                "95% on-time rent collection",
+                "Simplified lease renewals",
+                "Tenant communication portal",
+                "Automated financial reporting"
+            ],
+            technologies: ["React", "Node.js", "PostgreSQL"],
+            image: "/work/Rental Management & Billing SaaS.gif"
         }
     ],
 
     stats: {
         title: "Our Impact in Numbers",
         metrics: [
-            { number: "100+", label: "Projects Completed" },
+            { number: "30+", label: "Projects Completed" },
             { number: "50+", label: "Happy Clients" },
-            { number: "1M+", label: "Users Served" },
-            { number: "98%", label: "Client Satisfaction" },
+            { number: "10K+", label: "Users Served" },
+            { number: "100%", label: "Client Satisfaction" },
             { number: "3", label: "Countries" },
             { number: "24/7", label: "Support" }
         ]

@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import { ArrowRight, Code, Cpu, Globe, Rocket, Shield, Smartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import PageBanner from '@/components/layout/PageBanner';
 
 export const servicesData = [
     {
@@ -64,29 +65,30 @@ const Services = () => {
                 <meta name="description" content="Comprehensive technology services including AI Solutions, Web Development, Mobile Apps, MVP Development, Cybersecurity, and SaaS. Serving India, USA & UAE." />
             </Helmet>
             <Header />
-            <main className="pt-32 pb-20 min-h-screen">
-                <div className="container-custom">
-                    <div className="mb-20 text-center max-w-3xl mx-auto">
-                        <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">Our Services</h1>
-                        <p className="text-xl text-muted-foreground">
-                            We deliver cutting-edge digital solutions tailored to your unique business needs across India, USA, and UAE.
-                        </p>
-                        <div className="flex flex-wrap justify-center gap-4 mt-8 text-sm text-muted-foreground">
-                            <div className="flex items-center gap-2">
-                                <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                                <span>100+ Projects Delivered</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-                                <span>Global Presence</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                                <span>24/7 Support</span>
-                            </div>
+
+            <PageBanner
+                title="Our Services"
+                description="We deliver cutting-edge digital solutions tailored to your unique business needs across India, USA, and UAE."
+                extraContent={
+                    <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+                        <div className="flex items-center gap-2">
+                            <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                            <span>100+ Projects Delivered</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                            <span>Global Presence</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                            <span>24/7 Support</span>
                         </div>
                     </div>
+                }
+            />
 
+            <main className="pb-20 min-h-screen">
+                <div className="container-custom">
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {servicesData.map((service) => (
                             <div key={service.id} className="group bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary/20 transition-all duration-300">

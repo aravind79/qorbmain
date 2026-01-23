@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ArrowRight, Phone, Mail, MessageCircle } from 'lucide-react';
@@ -55,28 +56,32 @@ const CTASection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Button
-              size="xl"
-              className="bg-card text-foreground hover:bg-card/90 shadow-lg hover:shadow-xl group"
-            >
-              Schedule Free Consultation
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              variant="outline"
-              size="xl"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground/50"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              WhatsApp Us
-            </Button>
+            <Link to="/contact">
+              <Button
+                size="xl"
+                className="bg-card text-foreground hover:bg-card/90 shadow-lg hover:shadow-xl group"
+              >
+                Schedule Free Consultation
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform ml-2" />
+              </Button>
+            </Link>
+            <a href="https://wa.me/917907021813" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="outline"
+                size="xl"
+                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground/50"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                WhatsApp Us
+              </Button>
+            </a>
           </div>
 
           {/* Contact Options */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-primary-foreground/80">
-            <a href="#" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
+            <a href="tel:+917907021813" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
               <Phone className="w-4 h-4" />
-              <span>+91-XXXX-XXXXXX</span>
+              <span>+91 79070 21813</span>
             </a>
             <a href="mailto:hello@qorb.tech" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
               <Mail className="w-4 h-4" />

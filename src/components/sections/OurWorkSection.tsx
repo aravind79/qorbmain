@@ -2,50 +2,20 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-// Using the generated images (assuming they are moved to public/assets or imported - for now using placeholder logic or local paths if possible, but better to use the generated paths if I can move them, or just use the paths directly if they are in the brain. 
-// However, for the app to run, files should be in public or imported. 
-// I will assume I need to copy them to public. 
-// For now, I'll use the absolute paths in the src for the preview, or better, I should mistakenly use valid URLs.
-// Actually, since I generated them, they are in the brain. I should copy them to the project public folder to be usable by the dev server.
+// Homepage Work Section showcasing top projects
 
-const projects = [
-    {
-        id: 1,
-        title: 'Cryptos',
-        category: 'Web Design & Development',
-        description: 'A sleek, modern dashboard interface for a crypto trading platform with real-time data visualization.',
-        image: '/images/work-project-1.png', // I will ensure these exist
-        tags: ['Web Design', 'React', 'Tailwind'],
-        link: '#'
-    },
-    {
-        id: 2,
-        title: 'Furnish',
-        category: 'Mobile App Design',
-        description: 'Clean, minimalist mobile app interface for a premium furniture store with AR preview features.',
-        image: '/images/work-project-2.png',
-        tags: ['Mobile App', 'UI/UX', 'Figma'],
-        link: '#'
-    },
-    {
-        id: 3,
-        title: 'Secur',
-        category: 'Cyber Security Platform',
-        description: 'Futuristic cyber security website design featuring interactive data streams and threat visualization.',
-        image: '/images/work-project-3.png',
-        tags: ['Web Design', '3D WebGL', 'Security'],
-        link: '#'
-    },
-    {
-        id: 4,
-        title: 'Manipay',
-        category: 'Fintech Mobile Wallet',
-        description: 'Modern, trustworthy digital wallet application for seamless transactions and financial management.',
-        image: '/images/work-project-4.png',
-        tags: ['Fintech', 'Mobile App', 'iOS'],
-        link: '#'
-    }
-];
+import { workContent } from '@/lib/content';
+
+// Get top 4 projects for homepage
+const projects = workContent.projects.slice(0, 4).map(project => ({
+    id: project.id,
+    title: project.title,
+    category: project.category,
+    description: project.description,
+    image: project.image,
+    tags: project.technologies.slice(0, 3), // Show first 3 technologies as tags
+    link: '/work'
+}));
 
 const OurWorkSection = () => {
     return (

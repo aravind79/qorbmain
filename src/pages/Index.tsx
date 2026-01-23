@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -17,6 +18,8 @@ import SEO from '@/components/SEO';
 import { seoMetadata } from '@/lib/content';
 
 const Index = () => {
+  const { hash } = useLocation();
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -31,10 +34,22 @@ const Index = () => {
 
     requestAnimationFrame(raf);
 
+    // Handle initial hash scroll and hash changes
+    if (hash) {
+      const targetId = hash.replace('#', '');
+      const elem = document.getElementById(targetId);
+      if (elem) {
+        // Delay slightly to ensure content is layout
+        setTimeout(() => {
+          lenis.scrollTo('#' + targetId, { offset: 0 });
+        }, 100);
+      }
+    }
+
     return () => {
       lenis.destroy();
     };
-  }, []);
+  }, [hash]);
 
   return (
     <div className="min-h-screen bg-background relative">

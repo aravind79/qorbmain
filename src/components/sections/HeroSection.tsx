@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, CornerDownRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -69,7 +70,7 @@ const HeroSection = () => {
             >
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                <span>Trusted by 100+ businesses</span>
+                <span>Trusted by 30+ businesses</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-blue-500"></div>
@@ -77,7 +78,7 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                <span>98% Satisfaction</span>
+                <span>100% Satisfaction</span>
               </div>
             </motion.div>
 
@@ -88,20 +89,24 @@ const HeroSection = () => {
               transition={{ duration: 0.4, delay: 0.35 }}
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4"
             >
-              <Button
-                size="lg"
-                className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
-              >
-                Get Free Consultation
-              </Button>
-              <Button
-                variant="ghost"
-                size="lg"
-                className="w-full sm:w-auto text-foreground hover:text-primary font-medium group py-5 sm:py-6"
-              >
-                Explore Services
-                <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link to="/contact" className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+                >
+                  Get Free Consultation
+                </Button>
+              </Link>
+              <Link to="/services" className="w-full sm:w-auto">
+                <Button
+                  variant="ghost"
+                  size="lg"
+                  className="w-full text-foreground hover:text-primary font-medium group py-5 sm:py-6"
+                >
+                  Explore Services
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </motion.div>
 
             {/* Mobile Role Tags */}

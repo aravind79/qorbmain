@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -99,22 +100,26 @@ const StackingCard = ({ service, index, progress, range, targetScale }: Stacking
           {/* CTAs */}
           {!comingSoon && (
             <div className="mt-auto flex flex-wrap gap-2 lg:gap-3 pt-2 lg:pt-6">
-              <Button
-                variant="secondary"
-                size="sm"
-                className="bg-white text-gray-900 hover:bg-white/90 group/btn border-0 text-xs lg:text-base px-3 py-1.5 h-8 lg:h-11 w-full sm:w-auto"
-              >
-                Get Custom Quote
-                <ArrowRight className="w-3 h-3 lg:w-4 lg:h-4 group-hover/btn:translate-x-1 transition-transform ml-2" />
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                className="bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white text-xs lg:text-base px-3 py-1.5 h-8 lg:h-11 w-full sm:w-auto"
-              >
-                <Calendar className="w-3 h-3 lg:w-4 lg:h-4 mr-2" />
-                Book Consultation
-              </Button>
+              <Link to="/contact" className="w-full sm:w-auto">
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  className="bg-white text-gray-900 hover:bg-white/90 group/btn border-0 text-xs lg:text-base px-3 py-1.5 h-8 lg:h-11 w-full"
+                >
+                  Get Custom Quote
+                  <ArrowRight className="w-3 h-3 lg:w-4 lg:h-4 group-hover/btn:translate-x-1 transition-transform ml-2" />
+                </Button>
+              </Link>
+              <Link to="/contact" className="w-full sm:w-auto">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white text-xs lg:text-base px-3 py-1.5 h-8 lg:h-11 w-full"
+                >
+                  <Calendar className="w-3 h-3 lg:w-4 lg:h-4 mr-2" />
+                  Book Consultation
+                </Button>
+              </Link>
             </div>
           )}
         </motion.div>
