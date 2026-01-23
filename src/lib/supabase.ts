@@ -35,8 +35,19 @@ const mockPosts = [
 ];
 
 // Create a wrapper client that returns mock data if keys are missing
-export const supabase = (supabaseUrl && supabaseAnonKey)
-    ? createClient(supabaseUrl, supabaseAnonKey)
+// Create a wrapper client that returns mock data if keys are missing OR invalid
+const isValidUrl = (url: string | undefined): boolean => {
+    try {
+        return !!url && url.startsWith('http') && new URL(url).protocol.startsWith('http');
+    } catch {
+        return false;
+    }
+};
+
+const shouldUseRealClient = isValidUrl(supabaseUrl) && !!supabaseAnonKey;
+
+export const supabase = shouldUseRealClient
+    ? createClient(supabaseUrl!, supabaseAnonKey!)
     : {
         from: (table: string) => ({
             select: () => ({
@@ -57,7 +68,8 @@ export const supabase = (supabaseUrl && supabaseAnonKey)
         }),
         auth: {
             signInWithPassword: ({ email, password }: any) => {
-                if (email === 'admin@qorb.tech' && password === 'admin123') {
+                if ((email === 'admin@qorb.tech' && password === 'admin123') ||
+                    (email === 'hello@qorb.tech' && password === 'qorb123')) {
                     return Promise.resolve({ data: { user: { email } }, error: null });
                 }
                 return Promise.resolve({ data: null, error: { message: 'Invalid credentials (Mock)' } });

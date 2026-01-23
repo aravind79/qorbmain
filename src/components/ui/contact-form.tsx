@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { supabase } from '@/lib/supabase';
 import { sendEmail } from '@/lib/email';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -22,17 +23,41 @@ export function ContactForm() {
         e.preventDefault();
         setIsSubmitting(true);
 
+        // 1. Save to Supabase (Database / Dashboard)
+        const { error: dbError } = await supabase
+            .from('messages')
+            .insert([
+                {
+                    name: formData.name,
+                    email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message,
+                },
+            ]);
+
+        if (dbError) {
+            console.error('Error saving to database:', dbError);
+            alert('Something went wrong. Please try again.');
+            setIsSubmitting(false);
+            return;
+        }
+
+        // 2. Send Email Notification (via EmailJS)
+        // This ensures you receive an email to hello@qorb.tech
         if (form.current) {
-            const result = await sendEmail(form.current);
-            if (result.success) {
-                setIsSuccess(true);
-                setFormData({ name: '', email: '', subject: '', message: '' });
-                // Reset success message after 5 seconds if desired, or keep it
-                setTimeout(() => setIsSuccess(false), 5000);
-            } else {
-                alert('Failed to send message: ' + result.error);
+            const emailResult = await sendEmail(form.current);
+            if (!emailResult.success) {
+                console.error('Failed to send email notification:', emailResult.error);
+                // We don't block success if DB save worked, but we warn console
             }
         }
+
+        setIsSuccess(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+
+        // Reset success message after 5 seconds
+        setTimeout(() => setIsSuccess(false), 5000);
+
         setIsSubmitting(false);
     };
 

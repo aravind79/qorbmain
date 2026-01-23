@@ -51,7 +51,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-6">
-              <img src="/logo-footer.png" alt="QORB" className="h-24 md:h-32 w-auto object-contain" />
+              <img src="/footer-logo.png" alt="QORB" className="h-24 md:h-32 w-auto object-contain" />
             </Link>
             <p className="text-primary-foreground/60 text-sm mb-6">
               Intelligent Solutions for Modern Businesses

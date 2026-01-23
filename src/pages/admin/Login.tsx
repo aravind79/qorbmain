@@ -14,6 +14,14 @@ const Login = () => {
         e.preventDefault();
         setError('');
 
+        // DEV BYPASS: Allow specific credentials to skip Supabase Auth check
+        if (email === 'hello@qorb.tech' && password === 'qorb123') {
+            console.log('Using Dev Bypass login');
+            localStorage.setItem('isAuthenticated', 'true');
+            navigate('/admin/dashboard');
+            return;
+        }
+
         const { data, error } = await supabase.auth.signInWithPassword({
             email,
             password,
@@ -22,7 +30,7 @@ const Login = () => {
         if (error) {
             setError(error.message);
         } else if (data.user) {
-            // In a real app, you'd store session context or use a provider
+            localStorage.setItem('isAuthenticated', 'true');
             navigate('/admin/dashboard');
         }
     };
@@ -41,26 +49,30 @@ const Login = () => {
                         <label className="block text-sm font-medium mb-1">Email</label>
                         <Input
                             type="email"
+                            name="val_email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
-                            placeholder="admin@qorb.tech"
+                            placeholder="hello@qorb.tech"
+                            autoComplete="off"
                         />
                     </div>
                     <div>
                         <label className="block text-sm font-medium mb-1">Password</label>
                         <Input
                             type="password"
+                            name="val_password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
                             placeholder="••••••••"
+                            autoComplete="new-password"
                         />
                     </div>
                     <Button type="submit" className="w-full">Sign In</Button>
                 </form>
                 <div className="mt-4 text-center text-xs text-muted-foreground">
-                    Dev Mock: admin@qorb.tech / admin123
+                    Dev Access: hello@qorb.tech / qorb123
                 </div>
             </div>
         </div>
