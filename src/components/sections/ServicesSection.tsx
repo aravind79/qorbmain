@@ -61,7 +61,7 @@ const StackingCard = ({ service, index, progress, range, targetScale }: Stacking
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="flex flex-col lg:flex-row relative h-[70vh] lg:h-[450px] w-[95%] lg:w-[85%] max-w-6xl rounded-3xl overflow-hidden shadow-2xl origin-top [--card-offset:5px] lg:[--card-offset:20px] lg:max-h-[600px] overflow-y-auto lg:overflow-hidden bg-white"
+        className="flex flex-col lg:flex-row relative h-[60vh] lg:h-[450px] w-[95%] lg:w-[85%] max-w-6xl rounded-3xl overflow-hidden shadow-2xl origin-top [--card-offset:5px] lg:[--card-offset:20px] lg:max-h-[600px] overflow-y-auto lg:overflow-hidden bg-white"
       >
         {/* Left Side - Content */}
         <motion.div
@@ -262,7 +262,6 @@ const ServicesSection = () => {
         'Graphic design',
         'AI-enhanced editing'
       ],
-      comingSoon: true,
       color: '#6366f1'
     }
   ];

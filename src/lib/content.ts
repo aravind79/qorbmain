@@ -891,6 +891,142 @@ export const servicesContent = {
                 usa: "Creating SaaS platforms for US market with USD pricing, Stripe integration, and US tax compliance.",
                 uae: "Developing SaaS solutions for UAE with AED pricing, local payment methods, and VAT compliance."
             }
+        },
+        {
+            id: "media-production",
+            title: "Media Production",
+            shortDescription: "Professional video, photography, and graphic design services for brands.",
+            fullDescription: "Tell your brand's story with high-quality media production. From cinematic corporate videos to stunning product photography and AI-enhanced editing, we create visual assets that captivate your audience.",
+
+            features: [
+                "Corporate Video Production",
+                "Product Photography",
+                "Brand Identity Design",
+                "Motion Graphics",
+                "AI-Enhanced Video Editing",
+                "Social Media Reels/Shorts",
+                "Drone Videography",
+                "3D Visualization"
+            ],
+
+            approach: {
+                title: "Visual Storytelling",
+                description: "We combine creativity with technical expertise to produce media that not only looks good but conveys your message effectively.",
+                steps: [
+                    {
+                        title: "Concept Development",
+                        description: "We brainstorm ideas and create storyboards that align with your brand voice and campaign goals."
+                    },
+                    {
+                        title: "Pre-Production",
+                        description: "Planning every detail - from location scouting and casting to equipment selection and scheduling."
+                    },
+                    {
+                        title: "Production",
+                        description: "Executing the shoot with top-tier cameras, lighting, and audio equipment for cinematic quality."
+                    },
+                    {
+                        title: "Post-Production",
+                        description: "Editing, color grading, sound design, and adding visual effects to bring the vision to life."
+                    },
+                    {
+                        title: "Delivery",
+                        description: "Delivering finalized assets in optimized formats for web, social media, or broadcast."
+                    }
+                ]
+            },
+
+            benefits: [
+                {
+                    title: "Professional Quality",
+                    description: "Stand out with cinema-grade visuals that reflect the quality of your brand."
+                },
+                {
+                    title: "Increased Engagement",
+                    description: "Video content generates 1200% more shares than text and image combined."
+                },
+                {
+                    title: "Consistent Branding",
+                    description: "Maintain a cohesive visual identity across all your marketing channels."
+                },
+                {
+                    title: "Time Efficiency",
+                    description: "We handle the entire production process, saving you time and resources."
+                },
+                {
+                    title: "Enhanced Trust",
+                    description: "High-quality media builds credibility and trust with your potential customers."
+                }
+            ],
+
+            technologies: [
+                "Adobe Premiere Pro",
+                "After Effects",
+                "DaVinci Resolve",
+                "Cinema 4D",
+                "MidJourney",
+                "RunwayML",
+                "Sony Cinema Cameras",
+                "DJI Drones",
+                "Blender",
+                "Photoshop"
+            ],
+
+            useCases: [
+                {
+                    title: "Brand Commercials",
+                    description: "Cinematic ads for TV, YouTube, or social media to boost brand awareness."
+                },
+                {
+                    title: "Product Showcases",
+                    description: "High-end photography and 3D renders that highlight your product's best features."
+                },
+                {
+                    title: "Corporate Training",
+                    description: "Engaging educational videos for employee onboarding and training programs."
+                },
+                {
+                    title: "Event Coverage",
+                    description: "Dynamic video and photo coverage of corporate events, conferences, and launches."
+                }
+            ],
+
+            process: {
+                title: "Creative Process",
+                steps: [
+                    "Client briefing and goal setting",
+                    "Scriptwriting and storyboarding",
+                    "Location and talent management",
+                    "Filming and photography execution",
+                    "Editing and visual effects",
+                    "Review and feedback rounds"
+                ]
+            },
+
+            faq: [
+                {
+                    question: "Do you provide raw footage?",
+                    answer: "Typically we deliver the final edited product, but raw footage can be purchased separately if needed."
+                },
+                {
+                    question: "How long does a video project take?",
+                    answer: "Depending on complexity, a typical corporate video takes 2-4 weeks from concept to final delivery."
+                },
+                {
+                    question: "Do you travel for shoots?",
+                    answer: "Yes, our team is available to travel to your location across India and the UAE for on-site production."
+                },
+                {
+                    question: "Can you edit existing footage?",
+                    answer: "Absolutely! We can take your existing assets and give them a professional polish with editing and motion graphics."
+                }
+            ],
+
+            geoSpecific: {
+                india: "Creating culturally relevant media content for the diverse Indian market. From Mumbai studios to location shoots across the country.",
+                usa: "Producing high-end creative assets for US brands ensuring international quality standards and appeal.",
+                uae: "Delivering luxury media production services for Dubai and Abu Dhabi businesses, tailored to the vibrant Middle East market."
+            }
         }
     ]
 };

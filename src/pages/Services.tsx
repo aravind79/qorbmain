@@ -3,26 +3,24 @@ import { Helmet } from 'react-helmet-async';
 import { supabase } from '@/lib/supabase';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { ArrowRight, Code, Cpu, Globe, Rocket, Shield, Smartphone, Layout, Database, Cloud } from 'lucide-react';
+import { ArrowRight, Code, Cpu, Globe, Rocket, Shield, Smartphone, Layout, Database, Cloud, Video } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import PageBanner from '@/components/layout/PageBanner';
-
-// Fallback/Initial Data if DB is empty (Optional: can remove if you want strict DB only)
-export const initialServicesData = [
-    {
-        id: 'ai-solutions',
-        title: 'AI Solutions & Automation',
-        description: 'Leverage the power of Artificial Intelligence to automate complex workflows, analyze data, and create personalized experiences.',
-        icon: 'Cpu',
-        color: 'bg-blue-500',
-        features: ['Custom LLM Integration', 'Automation Chatbots', 'Predictive Analytics', 'Process Automation']
-    },
-    // ... we can keep the static list as a fallback or just use empty state
-];
+import { servicesContent } from '@/lib/content';
 
 const ICON_MAP: Record<string, any> = {
-    Cpu, Globe, Rocket, Shield, Code, Smartphone, Layout, Database, Cloud
+    Cpu, Globe, Rocket, Shield, Code, Smartphone, Layout, Database, Cloud, Video
+};
+
+const SERVICE_META: Record<string, { icon: string, color: string }> = {
+    'ai-solutions': { icon: 'Cpu', color: 'bg-blue-500' },
+    'web-development': { icon: 'Layout', color: 'bg-purple-500' },
+    'mobile-apps': { icon: 'Smartphone', color: 'bg-orange-500' },
+    'mvp-development': { icon: 'Rocket', color: 'bg-pink-500' },
+    'cyber-security': { icon: 'Shield', color: 'bg-green-500' },
+    'saas-development': { icon: 'Cloud', color: 'bg-indigo-500' },
+    'media-production': { icon: 'Video', color: 'bg-blue-600' },
 };
 
 const Services = () => {
@@ -44,10 +42,14 @@ const Services = () => {
             setServices(data);
         } else {
             console.log('Using static services data (DB empty or error)');
-            // Transform static data to match DB shape if needed, or just use it
-            // For now, let's stick to Empty State if DB is empty so user knows to add data
-            // Or use the static list as "demo" data
-            setServices([]);
+            const staticServices = servicesContent.services.map(s => ({
+                ...s,
+                // Map ID/Slug to specific Icon and Color to match Home Page section
+                icon: SERVICE_META[s.id]?.icon || 'Code',
+                color: SERVICE_META[s.id]?.color || 'bg-gray-500',
+                description: s.shortDescription // Map shortDescription to description
+            }));
+            setServices(staticServices);
         }
         setIsLoading(false);
     };

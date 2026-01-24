@@ -19,7 +19,7 @@ const projects = workContent.projects.slice(0, 4).map(project => ({
 
 const OurWorkSection = () => {
     return (
-        <section className="py-24 bg-white" id="work">
+        <section className="py-24 bg-white relative z-10" id="work">
             <div className="container-custom">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
