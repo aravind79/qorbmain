@@ -73,6 +73,11 @@ const Login = () => {
                 </form>
                 <div className="mt-4 text-center text-xs text-muted-foreground">
                     Dev Access: hello@qorb.tech / qorb123
+                    <br />
+                    <span className="text-amber-600 block mt-1">
+                        ⚠️ Note: Dev Bypass will cause "RLS Error" when creating posts.<br />
+                        Please login with real credentials for full access.
+                    </span>
                 </div>
             </div>
         </div>

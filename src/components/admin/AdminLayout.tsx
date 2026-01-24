@@ -27,7 +27,7 @@ const AdminLayout = () => {
         { icon: LayoutDashboard, label: 'Analytics', path: '/admin/dashboard' },
         { icon: FolderKanban, label: 'Projects', path: '/admin/projects' },
         { icon: Code, label: 'Services', path: '/admin/services' },
-        { icon: FileText, label: 'Blog Posts', path: '/admin/blog' },
+        { icon: FileText, label: 'Blogs', path: '/admin/blog' },
         { icon: Settings, label: 'Settings', path: '/admin/settings' },
     ];
 
@@ -84,7 +84,7 @@ const AdminLayout = () => {
             </aside>
 
             {/* Main Content */}
-            <div className={`flex-1 transition-all duration-300 ${isSidebarOpen ? 'ml-64' : 'ml-0 lg:ml-20'}`}>
+            <div className={`flex-1 transition-all duration-300 ${isSidebarOpen ? 'lg:ml-64' : 'lg:ml-20'}`}>
                 {/* Top Header */}
                 <header className="h-16 bg-white border-b border-gray-200 sticky top-0 z-40 px-6 flex items-center justify-between">
                     <Button variant="ghost" size="icon" onClick={() => setSidebarOpen(!isSidebarOpen)}>

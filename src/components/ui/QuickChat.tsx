@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { sendEmail } from '@/lib/email';
+import { supabase } from '@/lib/supabase';
 
 const QuickChat = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -28,6 +29,23 @@ const QuickChat = () => {
     const handleEmailSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
+
+        // 1. Save to Supabase (so it shows in Dashboard)
+        const { error: dbError } = await supabase
+            .from('messages')
+            .insert([
+                {
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                    subject: 'Quick Chat Message' // Default subject for quick chat
+                },
+            ]);
+
+        if (dbError) {
+            console.error('Error saving to DB:', dbError);
+            // We continue to send email even if DB fails, or you might want to stop here.
+        }
 
         if (formRef.current) {
             const result = await sendEmail(formRef.current);
