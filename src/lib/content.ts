@@ -614,141 +614,139 @@ export const servicesContent = {
         },
 
         {
-            id: "cyber-security",
-            title: "Cyber Security Services",
-            shortDescription: "Protect your digital assets with enterprise-grade security auditing, testing, and implementation.",
-            fullDescription: "Secure your business against cyber threats. From penetration testing to security audits, we help you identify vulnerabilities and implement robust security measures to protect your data and reputation.",
+            id: "digital-marketing-seo",
+            title: "Digital Marketing & SEO/GEO",
+            shortDescription: "Dominate search results and drive local growth with our specialized SEO and Geo-targeted marketing strategies.",
+            fullDescription: "Maximize your online impact with our data-driven Digital Marketing and specialized SEO/GEO services. We don't just increase traffic; we drive targeted, high-intent leads to your business by optimizing for the specific locations and audiences that matter most to you.",
 
             features: [
-                "Penetration Testing",
-                "Security Audits",
-                "Compliance (GDPR, HIPAA, SOC2)",
-                "Secure Coding Practices",
-                "Vulnerability Assessment",
-                "Security Training",
-                "Incident Response",
-                "Security Monitoring"
+                "Geo-Targeted SEO",
+                "Local Search Optimization",
+                "Content Marketing Strategy",
+                "PPC & Performance Marketing",
+                "Social Media Management",
+                "Technical SEO Audits",
+                "Conversion Rate Optimization",
+                "Analytics & ROI Tracking"
             ],
 
             approach: {
-                title: "Defense-in-Depth Strategy",
-                description: "We implement multiple layers of security controls to protect your systems, data, and users from evolving cyber threats.",
+                title: "Data-Driven & Location-Smart",
+                description: "We combine global marketing best practices with hyper-local strategies to ensure your brand resonates with the right audience in the right place.",
                 steps: [
                     {
-                        title: "Security Assessment",
-                        description: "Comprehensive evaluation of your current security posture, identifying vulnerabilities and risks across your infrastructure."
+                        title: "Market & Geo Analysis",
+                        description: "We analyze your target market, local competition, and search behavior in your specific focus regions (India, USA, UAE)."
                     },
                     {
-                        title: "Risk Analysis",
-                        description: "Prioritize security risks based on likelihood and impact. Focus on what matters most to your business."
+                        title: "Strategy Development",
+                        description: "Crafting a customized roadmap that blends SEO, content, and paid strategies to hit your growth KPIs."
                     },
                     {
-                        title: "Security Implementation",
-                        description: "Deploy security controls, encryption, access management, and monitoring tools tailored to your needs."
+                        title: "On-Page & Local Optimization",
+                        description: "Optimizing your website's robust architecture and content, ensuring it speaks the language of search engines and local users."
                     },
                     {
-                        title: "Testing & Validation",
-                        description: "Penetration testing and vulnerability scans to verify security measures are effective."
+                        title: "Content & Authority Building",
+                        description: "Creating high-value, location-specific content and building authoritative backlinks to boost your domain rating."
                     },
                     {
-                        title: "Continuous Monitoring",
-                        description: "Ongoing monitoring, threat detection, and regular security updates to stay ahead of new threats."
+                        title: "Performance Tracking",
+                        description: "Continuous monitoring of rankings, traffic, and conversions, with real-time adjustments to maximize ROI."
                     }
                 ]
             },
 
             benefits: [
                 {
-                    title: "Protect Your Reputation",
-                    description: "Data breaches damage trust and brand reputation. Prevent incidents before they happen."
+                    title: "Higher Local Visibility",
+                    description: "Be the top choice in your specific service areas. Dominate local search results and Google Maps."
                 },
                 {
-                    title: "Regulatory Compliance",
-                    description: "Meet GDPR, HIPAA, PCI-DSS, and other compliance requirements with confidence."
+                    title: "Qualified Leads",
+                    description: "Attract users who are actively searching for your services in your target regions, leading to higher conversion rates."
                 },
                 {
-                    title: "Prevent Financial Loss",
-                    description: "Cyber attacks are expensive. Investing in security is far cheaper than dealing with breaches."
+                    title: "Long-Term Growth",
+                    description: "SEO provides sustainable organic traffic that grows over time, reducing reliance on paid ads."
                 },
                 {
-                    title: "Customer Trust",
-                    description: "Show customers you take their data seriously. Security is a competitive advantage."
+                    title: "Brand Authority",
+                    description: "Establish your brand as a market leader with high-quality content and top search rankings."
                 },
                 {
-                    title: "Business Continuity",
-                    description: "Ensure your business can continue operating even in the face of security incidents."
+                    title: "Measurable ROI",
+                    description: "Track every click and conversion. Clear reporting shows exactly how our efforts impact your bottom line."
                 }
             ],
 
             technologies: [
-                "OWASP Top 10",
-                "Burp Suite",
-                "Metasploit",
-                "Nmap",
-                "Wireshark",
-                "SSL/TLS",
-                "OAuth 2.0",
-                "JWT",
-                "Encryption (AES, RSA)",
-                "SIEM Tools"
+                "Google Analytics 4",
+                "Google Custom Search",
+                "SEMrush",
+                "Ahrefs",
+                "Moz",
+                "Google Search Console",
+                "Yoast SEO",
+                "Meta Ads Manager",
+                "LinkedIn Ads",
+                "HubSpot"
             ],
 
             useCases: [
                 {
-                    title: "Web Application Security",
-                    description: "Protect web apps from SQL injection, XSS, CSRF, and other common vulnerabilities."
+                    title: "Local Business Growth",
+                    description: "Helping brick-and-mortar or service-area businesses capture the local market share in their cities."
                 },
                 {
-                    title: "API Security",
-                    description: "Secure your APIs with authentication, rate limiting, encryption, and monitoring."
+                    title: "International Expansion",
+                    description: "Strategies for companies expanding into new regions (e.g., a US company targeting the UAE market)."
                 },
                 {
-                    title: "Cloud Security",
-                    description: "Secure your AWS, Azure, or GCP infrastructure with proper configurations and access controls."
+                    title: "E-Commerce Sales",
+                    description: "Driving organic traffic to product pages and optimizing conversion funnels for online stores."
                 },
                 {
-                    title: "Compliance Audits",
-                    description: "Prepare for and pass compliance audits for GDPR, HIPAA, SOC2, and other standards."
+                    title: "B2B Lead Generation",
+                    description: "Targeting high-value B2B decision-makers through professional content and LinkedIn strategies."
                 }
             ],
 
             process: {
-                title: "Security Engagement Process",
+                title: "Our Marketing Workflow",
                 steps: [
-                    "Initial security consultation",
-                    "Scope definition and planning",
-                    "Security assessment and testing",
-                    "Detailed findings report",
-                    "Remediation recommendations",
-                    "Implementation support",
-                    "Re-testing and validation",
-                    "Ongoing security monitoring"
+                    "Audit and competitive analysis",
+                    "Strategy and KPI definition",
+                    "Technical optimization and setup",
+                    "Content creation and publishing",
+                    "Campaign launch and promotion",
+                    "Monthly reporting and refinement"
                 ]
             },
 
             faq: [
                 {
-                    question: "How often should we do penetration testing?",
-                    answer: "We recommend annual penetration testing, plus testing after major changes to your application or infrastructure."
+                    question: "How long does SEO take to show results?",
+                    answer: "SEO is a long-term strategy. Typically, significant improvements are seen in 3-6 months, but results compound over time."
                 },
                 {
-                    question: "What's the difference between vulnerability scanning and penetration testing?",
-                    answer: "Vulnerability scanning is automated and finds known issues. Penetration testing is manual, simulates real attacks, and finds complex vulnerabilities scanners miss."
+                    question: "What is Geo-Targeting?",
+                    answer: "Geo-targeting involves delivering content and ads to users based on their specific geographic location, ensuring higher relevance and engagement."
                 },
                 {
-                    question: "Will security testing disrupt our operations?",
-                    answer: "We work with you to schedule testing during low-traffic periods and can perform non-intrusive testing in production environments."
+                    question: "Do you handle social media as well?",
+                    answer: "Yes, we offer integrated digital marketing services including social media management, paid social, and community building."
                 },
                 {
-                    question: "Do you help with compliance certifications?",
-                    answer: "Yes! We help you prepare for and achieve compliance with GDPR, HIPAA, SOC2, PCI-DSS, and other standards."
+                    question: "How do you measure success?",
+                    answer: "We track KPIs aligned with your goals: organic traffic, keyword rankings, conversion rate, cost per acquisition, and overall ROI."
                 }
             ],
 
             geoSpecific: {
-                india: "Helping Indian businesses comply with IT Act, DPDP Act, and international security standards. Protect your business and customer data.",
-                usa: "Ensuring US companies meet HIPAA, SOC2, and state privacy laws. Enterprise-grade security for American businesses.",
-                uae: "Supporting UAE businesses with cybersecurity aligned with UAE Cybersecurity Law and data protection regulations."
+                india: "Dominating the Indian digital landscape with hyper-local SEO for Tier 1 & 2 cities and vernacular content strategies.",
+                usa: "Competing in the competitive US market with high-authority link building and national vs. local SEO segmentation.",
+                uae: "Capturing the Middle East audience with Arabic-English bilingual SEO and optimization for mobile-first user behavior."
             }
         },
 
@@ -1359,10 +1357,10 @@ export const workContent = {
             company: "UAE"
         },
         {
-            quote: "Their security audit saved us from potential disasters. Thorough, professional, and helped us achieve SOC2 compliance.",
+            quote: "Their digital marketing strategy doubled our organic traffic in 3 months. Data-driven, creative, and results-oriented.",
             author: "Michael Chen",
-            position: "CTO, FinTech Solutions",
-            company: "USA"
+            position: "CMO",
+            company: "FinTech Solutions"
         }
     ],
 
@@ -1376,8 +1374,8 @@ export const workContent = {
 export const seoMetadata = {
     home: {
         title: "QORB - AI-First Technology Solutions | Web, Mobile & AI Development",
-        description: "Leading AI and technology solutions company serving India, USA & UAE. Expert in AI automation, web development, mobile apps, SaaS, and cybersecurity. Get free consultation today.",
-        keywords: "AI development, web development, mobile app development, SaaS development, cybersecurity, India, USA, UAE, technology solutions"
+        description: "Leading AI and technology solutions company serving India, USA & UAE. Expert in AI automation, web development, mobile apps, SaaS, and Digital Marketing & SEO. Get free consultation today.",
+        keywords: "AI development, web development, mobile app development, SaaS development, Digital Marketing, SEO, India, USA, UAE, technology solutions"
     },
     about: {
         title: "About QORB - Global AI & Technology Partner | India, USA, UAE",
@@ -1386,8 +1384,8 @@ export const seoMetadata = {
     },
     services: {
         title: "Our Services - AI, Web, Mobile, SaaS Development | QORB",
-        description: "Comprehensive technology services: AI Solutions, Web Development, Mobile Apps, MVP Development, Cybersecurity, and SaaS. Serving India, USA & UAE.",
-        keywords: "technology services, AI services, web development services, mobile app development, SaaS development, cybersecurity services"
+        description: "Comprehensive technology services: AI Solutions, Web Development, Mobile Apps, MVP Development, Digital Marketing, SEO/GEO, and SaaS. Serving India, USA & UAE.",
+        keywords: "technology services, AI services, web development services, mobile app development, SaaS development, Digital Marketing services, SEO services"
     },
     work: {
         title: "Our Work - Portfolio & Case Studies | QORB Projects",

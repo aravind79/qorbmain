@@ -25,12 +25,12 @@ const mockPosts = [
     },
     {
         id: '3',
-        title: 'Cybersecurity Best Practices 2025',
-        slug: 'cybersecurity-best-practices',
-        content: 'With the rise of AI-driven cyber attacks, security is more important than ever. We explore the top trends in cybersecurity and how to protect your digital assets.',
-        excerpt: 'Protect your business from evolving threats. Explore the top cybersecurity trends for 2025.',
+        title: 'Mastering Geo-Targeted SEO in 2025',
+        slug: 'geo-targeted-seo-strategies',
+        content: 'Local SEO is evolving. Learn how to target specific regions like India, USA, and UAE to drive high-intent traffic to your business using geo-specific strategies.',
+        excerpt: 'Boost your local visibility. Discover key strategies for Geo-Targeted SEO in 2025.',
         created_at: '2025-01-22T09:15:00Z',
-        image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000'
+        image: 'https://images.unsplash.com/photo-1572044162444-ad6021194360?auto=format&fit=crop&q=80&w=1000'
     }
 ];
 
