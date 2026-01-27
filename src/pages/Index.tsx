@@ -12,6 +12,7 @@ import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CTASection from '@/components/sections/CTASection';
 import IndustriesSection from '@/components/sections/IndustriesSection';
 import SmoothFollower from '@/components/effects/SmoothFollower';
+import InHouseAdvantageSection from '@/components/sections/InHouseAdvantageSection';
 import ClientsMarquee from '@/components/sections/ClientsMarquee';
 import OurWorkSection from '@/components/sections/OurWorkSection';
 import SEO from '@/components/SEO';
@@ -65,6 +66,7 @@ const Index = () => {
       <main className="relative">
         <HeroSection />
         <ClientsMarquee />
+        <InHouseAdvantageSection />
         <ServicesSection />
         <OurWorkSection />
         <WhyChooseSection />

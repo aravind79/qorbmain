@@ -65,8 +65,8 @@ export const servicesContent = {
         {
             id: "ai-solutions",
             title: "AI Solutions & Automation",
-            shortDescription: "Leverage the power of Artificial Intelligence to automate complex workflows, analyze data, and create personalized experiences.",
-            fullDescription: "Transform your business with intelligent automation and AI-powered solutions. From custom LLM integrations to predictive analytics, we help you harness the power of artificial intelligence to streamline operations, enhance decision-making, and deliver exceptional customer experiences.",
+            shortDescription: "Automate operations and integrate intelligence.",
+            fullDescription: "We don't just 'add AI'. We architect intelligent systems that automate your specific operational bottlenecks. From custom LLMs to predictive workflows, we turn your data into your biggest competitive advantage.",
 
             features: [
                 "Custom LLM Integration",
@@ -202,8 +202,8 @@ export const servicesContent = {
         {
             id: "web-development",
             title: "Web Development",
-            shortDescription: "High-performance, scalable web applications built with modern frameworks to drive your business growth.",
-            fullDescription: "Create stunning, fast, and scalable web applications that deliver exceptional user experiences. From e-commerce platforms to enterprise web apps, we build digital solutions that drive growth and engagement.",
+            shortDescription: "High-performance platforms, not just websites.",
+            fullDescription: "We build digital platforms that drive revenue. Whether it's a high-scale e-commerce engine or a complex enterprise portal, we engineer for speed, SEO dominance, and conversion.",
 
             features: [
                 "React & Next.js Apps",
@@ -340,8 +340,8 @@ export const servicesContent = {
         {
             id: "mobile-apps",
             title: "Mobile App Development",
-            shortDescription: "Native and cross-platform mobile applications that provide seamless user experiences on iOS and Android.",
-            fullDescription: "Build mobile apps that users love. Whether you need a native iOS app, Android app, or cross-platform solution, we create mobile experiences that engage, delight, and convert.",
+            shortDescription: "Native performance that users love.",
+            fullDescription: "Your customers live on their phones. We build native and cross-platform apps that feel premium, perform flawlessly, and keep users coming back. We handle the entire lifecycle from design to App Store optimization.",
 
             features: [
                 "iOS & Android Development",
@@ -479,8 +479,8 @@ export const servicesContent = {
         {
             id: "mvp-development",
             title: "Rapid MVP Development",
-            shortDescription: "Launch your startup idea in weeks, not months. We build scalable MVPs to test your market fast.",
-            fullDescription: "Turn your startup idea into reality quickly. We specialize in building Minimum Viable Products that let you validate your concept, attract investors, and start acquiring customers - all within weeks.",
+            shortDescription: "Launch validation-ready products in weeks.",
+            fullDescription: "Speed is your only advantage. We take your concept and deliver a market-ready MVP in weeks, not months. No bloat, just the core value proposition built to scale into a full product.",
 
             features: [
                 "Rapid Prototyping",
@@ -616,8 +616,8 @@ export const servicesContent = {
         {
             id: "digital-marketing-seo",
             title: "Digital Marketing & SEO/GEO",
-            shortDescription: "Dominate search results and drive local growth with our specialized SEO and Geo-targeted marketing strategies.",
-            fullDescription: "Maximize your online impact with our data-driven Digital Marketing and specialized SEO/GEO services. We don't just increase traffic; we drive targeted, high-intent leads to your business by optimizing for the specific locations and audiences that matter most to you.",
+            shortDescription: "Dominate local and global search results.",
+            fullDescription: "Traffic means nothing without intent. We engineer your digital presence to capture high-value leads in your specific target markets. We combine technical SEO with precision content strategies to make you the authority in your niche.",
 
             features: [
                 "Geo-Targeted SEO",
@@ -753,8 +753,8 @@ export const servicesContent = {
         {
             id: "saas-development",
             title: "SaaS Product Development",
-            shortDescription: "End-to-end development of Software as a Service platforms, from multi-tenancy to subscription billing.",
-            fullDescription: "Build a successful SaaS business with our end-to-end development services. We handle everything from architecture to billing, so you can focus on growing your customer base.",
+            shortDescription: "Scalable, multi-tenant architectures for serious growth.",
+            fullDescription: "We build the engines that power recurring revenue. Our team specializes in complex, multi-tenant SaaS architectures that are secure, scalable, and ready for enterprise adoption from day one.",
 
             features: [
                 "Multi-tenant Architecture",
@@ -1396,5 +1396,56 @@ export const seoMetadata = {
         title: "Contact QORB - Get Free Consultation | India, USA, UAE",
         description: "Get in touch with QORB for your next project. Free consultation available. Offices in India, USA, and UAE. 24/7 support.",
         keywords: "contact, consultation, get quote, hire developers, technology partner"
+    }
+};
+
+export const servicesPageContent = {
+    hero: {
+        headline: "You Build the Business. We Build the Tech.",
+        subheadline: "Stop managing freelancers and vendors. We operate as your in-house product, engineering, and growth team—fully managed, outcome-driven, and built for scale."
+    },
+    sections: [
+        {
+            id: "product-engineering",
+            title: "Product & Engineering Team",
+            positioning: "Your End-to-End Product Powerhouse",
+            description: "We don't just write code; we take ownership of the product lifecycle. From rapid MVPs that validate markets to enterprise-grade SaaS platforms, we build the technology that powers your business.",
+            serviceIds: ["mvp-development", "saas-development", "mobile-apps", "web-development"]
+        },
+        {
+            id: "growth-intelligence",
+            title: "Growth & Intelligence Team",
+            positioning: "Data-Driven Growth Engine",
+            description: "Building a product is half the battle. We engineer the growth. By integrating AI automation with precision-targeted marketing, we turn your digital presence into a revenue-generating machine.",
+            serviceIds: ["ai-solutions", "digital-marketing-seo"]
+        },
+        {
+            id: "brand-experience",
+            title: "Brand & Experience Team",
+            positioning: "World-Class Digital Experience",
+            description: "First impressions equate to market value. We ensure your brand looks, feels, and performs like a category leader through premium media and design.",
+            serviceIds: ["media-production"]
+        }
+    ]
+};
+
+export const homePageContent = {
+    inHouseAdvantage: {
+        headline: "We Are Your Technical Co-Founder",
+        description: "Growing businesses need more than outsourced tasks—they need ownership. We replace the chaos of multiple agencies with a single, unified team dedicated to your metric of success.",
+        pillars: [
+            {
+                title: "Total Product Ownership",
+                description: "We manage the roadmap, architecture, and deployment. You focus on sales and strategy."
+            },
+            {
+                title: "Integrated Growth",
+                description: "Marketing isn't an afterthought. It's built into the product DNA from day one."
+            },
+            {
+                title: "Speed to Outcome",
+                description: "No recruitment delays. No ramp-up time. Instant access to a senior-level team."
+            }
+        ]
     }
 };
