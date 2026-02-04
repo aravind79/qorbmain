@@ -53,12 +53,7 @@ const CostComparisonSection = () => {
                                     {traditional.label}
                                 </h3>
                             </div>
-                            <div className="p-6 flex flex-col items-center justify-center border-l border-gray-200 bg-gradient-to-br from-primary/5 to-blue-500/5 relative">
-                                <div className="absolute -top-8 left-1/2 -translate-x-1/2">
-                                    <span className="bg-gradient-to-r from-amber-400 to-orange-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
-                                        ⭐ Best Choice
-                                    </span>
-                                </div>
+                            <div className="p-6 flex flex-col items-center justify-center border-l border-gray-200 bg-gradient-to-br from-primary/5 to-blue-500/5">
                                 <div className="px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-2">
                                     QORB
                                 </div>

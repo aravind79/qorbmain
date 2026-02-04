@@ -27,10 +27,36 @@ const Contact = () => {
                         {/* Contact Info */}
                         <div className="mb-12">
                             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-                            <div className="space-y-4 text-lg">
-                                <p><span className="font-semibold">Email:</span> hello@qorb.tech</p>
-                                <p><span className="font-semibold">Phone:</span> +91 79070 21813</p>
-                                <p><span className="font-semibold">Address:</span> The Atomic, Technopark, Trivandrum</p>
+
+                            {/* India Office */}
+                            <div className="mb-6">
+                                <div className="flex items-center gap-2 mb-3">
+                                    <Globe className="w-5 h-5 text-primary" />
+                                    <h4 className="text-lg font-semibold">🇮🇳 India</h4>
+                                </div>
+                                <div className="space-y-2 text-base ml-7">
+                                    <div className="flex items-start gap-2">
+                                        <MapPin className="w-4 h-4 mt-1 text-muted-foreground flex-shrink-0" />
+                                        <p className="text-muted-foreground">The Atomic, Near Technopark Phase 1, Kazhakootam, 695582, Trivandrum, Kerala</p>
+                                    </div>
+                                    <p><span className="font-semibold">Phone:</span> +91 79070 21813</p>
+                                    <p><span className="font-semibold">Email:</span> hello@qorb.tech</p>
+                                </div>
+                            </div>
+
+                            {/* Dubai Office */}
+                            <div>
+                                <div className="flex items-center gap-2 mb-3">
+                                    <Globe className="w-5 h-5 text-primary" />
+                                    <h4 className="text-lg font-semibold">🇦🇪 UAE</h4>
+                                </div>
+                                <div className="space-y-2 text-base ml-7">
+                                    <div className="flex items-start gap-2">
+                                        <MapPin className="w-4 h-4 mt-1 text-muted-foreground flex-shrink-0" />
+                                        <p className="text-muted-foreground">Modern Working, Ontario Tower - Office 1503 - Business Bay - Dubai</p>
+                                    </div>
+                                    <p><span className="font-semibold">Email:</span> hello@qorb.tech</p>
+                                </div>
                             </div>
                         </div>
 

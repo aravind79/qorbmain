@@ -4,8 +4,21 @@ import { ArrowRight, CornerDownRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import InteractiveDots from '@/components/effects/InteractiveDots';
 import ServiceOrbit from '@/components/effects/ServiceOrbit';
+import { useTypingEffect } from '@/hooks/useTypingEffect';
 
 const HeroSection = () => {
+  // Typing effect for the dynamic text with infinite loop
+  // Types, pauses 2s, deletes, pauses 500ms, repeats
+  const { displayedText } = useTypingEffect(
+    'Tech & Marketing Team,',
+    80,        // typing speed (ms per character)
+    600,       // initial delay before first typing
+    true,      // enable looping
+    2000,      // pause 2s before deleting
+    500,       // pause 500ms before typing again
+    40         // deletion speed (faster than typing)
+  );
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-slate-50">
       {/* Interactive Dots Background - Hero Only */}
@@ -29,23 +42,31 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="flex items-center justify-center lg:justify-start gap-2 text-muted-foreground mb-4 sm:mb-6"
+              className="flex items-center justify-center lg:justify-start gap-2 text-muted-foreground mb-4 sm:mb-6 mt-4 sm:mt-0"
             >
               <CornerDownRight className="w-4 h-4" />
               <span className="text-xs sm:text-sm font-medium">AI-First Technology Solutions Company.</span>
             </motion.div>
 
-            {/* Headline */}
+            {/* Headline with Typing Effect */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] mb-3 sm:mb-5"
+              className="font-display text-4xl sm:text-4xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15] mb-4 sm:mb-5"
             >
               <span className="text-foreground">Your Dedicated </span>
-              <span className="text-primary">In-House</span>
+              <span className="text-foreground">In-House</span>
               <br />
-              <span className="text-foreground">Tech & Marketing Team,</span>
+              <span className="text-primary">
+                {displayedText}
+                <span className="inline-block w-0.5 h-[0.9em] bg-primary ml-1 animate-pulse"
+                  style={{
+                    animation: 'blink 1s step-end infinite',
+                    verticalAlign: 'middle'
+                  }}
+                />
+              </span>
               <br />
               <span className="text-foreground">Without the Overhead</span>
             </motion.h1>
@@ -55,7 +76,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="text-sm text-muted-foreground leading-relaxed mb-4 sm:mb-6 max-w-md mx-auto lg:mx-0"
+              className="text-base text-muted-foreground leading-relaxed mb-5 sm:mb-6 max-w-md mx-auto lg:mx-0"
             >
               Scale your business with a full-stack technology and marketing partner that works as an extension of your team
             </motion.p>
@@ -65,7 +86,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.25 }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-6 sm:mb-8 text-xs sm:text-sm text-muted-foreground"
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-7 sm:mb-8 text-xs sm:text-sm text-muted-foreground"
             >
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500"></div>
@@ -91,7 +112,7 @@ const HeroSection = () => {
               <Link to="/pricing" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-8 sm:px-8 py-6 sm:py-6 text-base sm:text-base font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
                 >
                   Build Your Team
                 </Button>

@@ -35,6 +35,11 @@ const Footer = () => {
       phone: '+91 79070 21813',
       email: 'hello@qorb.tech',
     },
+    {
+      country: '🇦🇪 UAE',
+      city: 'Modern Working, Ontario Tower - Office 1503 - Business Bay - Dubai',
+      email: 'hello@qorb.tech',
+    },
   ];
 
   const socialLinks = [
