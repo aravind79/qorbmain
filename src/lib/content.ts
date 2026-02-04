@@ -1,4 +1,4 @@
-// Centralized Content Repository for SEO & Geo-Targeting
+// Centralized Content Repository for SEO & GEO (Generative Engine Optimization)
 // Targeting: India, USA, UAE
 
 export const geoLocations = {
@@ -620,7 +620,7 @@ export const servicesContent = {
             fullDescription: "Traffic means nothing without intent. We engineer your digital presence to capture high-value leads in your specific target markets. We combine technical SEO with precision content strategies to make you the authority in your niche.",
 
             features: [
-                "Geo-Targeted SEO",
+                "Generative Engine Optimization (GEO)",
                 "Local Search Optimization",
                 "Content Marketing Strategy",
                 "PPC & Performance Marketing",
@@ -730,8 +730,8 @@ export const servicesContent = {
                     answer: "SEO is a long-term strategy. Typically, significant improvements are seen in 3-6 months, but results compound over time."
                 },
                 {
-                    question: "What is Geo-Targeting?",
-                    answer: "Geo-targeting involves delivering content and ads to users based on their specific geographic location, ensuring higher relevance and engagement."
+                    question: "What is GEO (Generative Engine Optimization)?",
+                    answer: "GEO is the practice of optimizing your content for AI-powered search engines and large language models (like ChatGPT, Perplexity, Google SGE). It ensures your brand appears in AI-generated search results and recommendations, capturing the future of search traffic."
                 },
                 {
                     question: "Do you handle social media as well?",
@@ -1396,6 +1396,11 @@ export const seoMetadata = {
         title: "Contact QORB - Get Free Consultation | India, USA, UAE",
         description: "Get in touch with QORB for your next project. Free consultation available. Offices in India, USA, and UAE. 24/7 support.",
         keywords: "contact, consultation, get quote, hire developers, technology partner"
+    },
+    pricing: {
+        title: "Pricing & Team Packages | QORB - Dedicated Tech & Marketing Teams",
+        description: "Flexible team packages for startups in India, USA, and UAE. Get a dedicated in-house tech and marketing team without hiring costs. Essentials & Full Team options. Save 70-90% vs traditional hiring.",
+        keywords: "team pricing, dedicated development team cost, offshore team pricing, in-house team cost, tech team India, development team USA, marketing team UAE, startup team packages"
     }
 };
 
@@ -1403,6 +1408,60 @@ export const servicesPageContent = {
     hero: {
         headline: "You Build the Business. We Build the Tech.",
         subheadline: "Stop managing freelancers and vendors. We operate as your in-house product, engineering, and growth team—fully managed, outcome-driven, and built for scale."
+    },
+    featuredService: {
+        id: "in-house-partner",
+        title: "Your In-House Tech & Marketing Partner",
+        subtitle: "Get a complete dedicated team instead of juggling individual services",
+        description: "Why hire 5-10 people or manage multiple vendors when you can have an entire tech and marketing team, fully managed and outcome-driven? Choose from our flexible team packages designed for businesses at any stage.",
+        highlight: "Save 70-90% vs traditional hiring • Team ready in 48 hours • Zero management overhead",
+        packages: [
+            {
+                id: "essentials",
+                name: "Essentials Team",
+                tagline: "For MVPs & Small Businesses",
+                teamSize: "5 specialists",
+                teamMembers: [
+                    "Full-Stack Developer",
+                    "QA Engineer",
+                    "Graphic Designer",
+                    "Content Writer",
+                    "Digital Marketing Specialist"
+                ],
+                highlights: [
+                    "Weekly progress updates",
+                    "Full project management",
+                    "Cloud deployment included"
+                ],
+                ctaText: "Request Pricing",
+                ctaLink: "/pricing"
+            },
+            {
+                id: "full-team",
+                name: "Full Team",
+                tagline: "For Growth-Stage & Enterprise",
+                teamSize: "12 specialists",
+                teamMembers: [
+                    "3 Developers + QA",
+                    "2 Designers (UI/UX + Graphics)",
+                    "3 Marketing Specialists",
+                    "Product Manager",
+                    "DevOps Engineer"
+                ],
+                highlights: [
+                    "Daily standups & sprints",
+                    "24/5 priority support",
+                    "Advanced analytics & optimization"
+                ],
+                ctaText: "Get Custom Quote",
+                ctaLink: "/pricing",
+                featured: true
+            }
+        ],
+        bottomCta: {
+            text: "View Full Team Packages & Pricing",
+            link: "/pricing"
+        }
     },
     sections: [
         {
@@ -1445,6 +1504,229 @@ export const homePageContent = {
             {
                 title: "Speed to Outcome",
                 description: "No recruitment delays. No ramp-up time. Instant access to a senior-level team."
+            }
+        ]
+    },
+    inHousePartner: {
+        sectionTitle: "Your In-House Tech & Marketing Partner",
+        headline: "Build Like a Startup. Scale Like an Enterprise.",
+        description: "Why hire 5-10 people when you can have an entire tech and marketing team, fully managed and outcome-driven? We act as your dedicated in-house team—handling everything from product development to digital growth—without the hiring headaches.",
+        benefits: [
+            {
+                title: "Instant Team, Zero Overhead",
+                description: "No recruitment costs or onboarding delays. No salaries, benefits, or office space expenses. Plug-and-play team ready in 48 hours.",
+                features: [
+                    "Deploy team in 48-72 hours",
+                    "No hiring costs or HR overhead",
+                    "Skip months of recruitment",
+                    "Zero office space needed"
+                ]
+            },
+            {
+                title: "Full-Stack Capability",
+                description: "Product development, design, QA, and DevOps. Content creation, SEO, and paid marketing. All working together under one roof.",
+                features: [
+                    "End-to-end product development",
+                    "Design, QA, and DevOps included",
+                    "Content and SEO specialists",
+                    "Integrated marketing team"
+                ]
+            },
+            {
+                title: "Predictable Monthly Cost",
+                description: "Fixed monthly pricing—know exactly what you're paying. Scale up or down based on your needs. Flexible engagement models.",
+                features: [
+                    "Transparent fixed pricing",
+                    "No hidden costs or surprises",
+                    "Scale team as you grow",
+                    "Cancel anytime flexibility"
+                ]
+            }
+        ],
+        geoSpecific: {
+            india: "Helping Indian startups and SMEs compete globally with world-class tech and marketing teams at local prices. Serving businesses across Mumbai, Bangalore, Delhi, Hyderabad, and beyond.",
+            usa: "Empowering American businesses from Silicon Valley to New York with dedicated offshore teams that work in your timezone. Cost-effective scaling without compromising quality.",
+            uae: "Supporting UAE's thriving business ecosystem with expert tech and marketing teams. Perfect for Dubai and Abu Dhabi companies looking to scale efficiently."
+        }
+    },
+    costComparison: {
+        sectionTitle: "The Real Cost of Building Your Own Team",
+        description: "Building an in-house team comes with massive hidden costs and management headaches. Here's what most businesses don't realize until it's too late.",
+        traditional: {
+            label: "Hiring In-House (Traditional)",
+            items: [
+                { icon: "💸", label: "Cost", value: "$20K-$50K+/month in salaries" },
+                { icon: "⏰", label: "Time to Start", value: "2-6 months recruiting" },
+                { icon: "🤯", label: "Management", value: "You manage 5-10 people" },
+                { icon: "📉", label: "Risk", value: "High turnover, training costs" },
+                { icon: "🔧", label: "Tools & Software", value: "$500-$2K/month extra" },
+                { icon: "📊", label: "Expertise", value: "Limited to who you hire" }
+            ]
+        },
+        qorb: {
+            label: "QORB In-House Partner",
+            items: [
+                { icon: "✅", label: "Cost", value: "Fraction of the cost" },
+                { icon: "✅", label: "Time to Start", value: "48 hours team deployment" },
+                { icon: "✅", label: "Management", value: "Fully managed by us" },
+                { icon: "✅", label: "Risk", value: "Zero turnover risk" },
+                { icon: "✅", label: "Tools & Software", value: "All included" },
+                { icon: "✅", label: "Expertise", value: "Senior-level multi-domain team" }
+            ]
+        },
+        painPointCallout: {
+            title: "Did you know?",
+            description: "The average cost to hire and onboard a single developer is $15K-$30K. With QORB, you get an entire team for less than one employee's salary."
+        }
+    },
+    pricingPackages: {
+        pageTitle: "Transparent Team Packages. Tailored to Your Needs.",
+        pageDescription: "Choose the team configuration that fits your business stage and growth goals. Contact us for custom pricing.",
+        packages: [
+            {
+                id: "essentials",
+                name: "Essentials Team",
+                tagline: "Perfect for Early-Stage Growth",
+                bestFor: "Early-stage startups, MVPs, and small businesses",
+                team: [
+                    { role: "Full-Stack Developer", description: "Frontend + Backend development" },
+                    { role: "QA Engineer", description: "Testing & Quality Assurance" },
+                    { role: "Graphic Designer", description: "UI/UX + Brand Assets" },
+                    { role: "Content Writer", description: "Blogs, Web Copy, SEO Content" },
+                    { role: "Digital Marketing Specialist", description: "SEO, Ads, Social Media" }
+                ],
+                teamSize: "5 specialists",
+                included: [
+                    "Weekly progress calls & updates",
+                    "Full project management",
+                    "Cloud deployment & hosting setup",
+                    "Monthly performance reports",
+                    "Email support (Mon-Fri, 9 AM - 6 PM)"
+                ],
+                perfectFor: [
+                    "Building and launching MVPs",
+                    "Small marketing campaigns",
+                    "Website development & maintenance",
+                    "Content marketing & SEO growth"
+                ]
+            },
+            {
+                id: "full-team",
+                name: "Full Team",
+                tagline: "Complete In-House Partner",
+                bestFor: "Growth-stage startups and established businesses",
+                team: [
+                    { role: "Senior Full-Stack Developer", category: "Product & Engineering" },
+                    { role: "Frontend Developer", description: "React/Next.js specialist", category: "Product & Engineering" },
+                    { role: "Backend Developer", description: "API & Database specialist", category: "Product & Engineering" },
+                    { role: "QA Engineer", description: "Automated & Manual Testing", category: "Product & Engineering" },
+                    { role: "UI/UX Designer", description: "Product design & prototyping", category: "Design & Creative" },
+                    { role: "Graphic Designer", description: "Brand & marketing assets", category: "Design & Creative" },
+                    { role: "SEO Specialist", description: "Technical & Content SEO", category: "Growth & Marketing" },
+                    { role: "Digital Marketing Manager", description: "Paid Ads & Strategy", category: "Growth & Marketing" },
+                    { role: "Content Writer", description: "Blog, social, email campaigns", category: "Growth & Marketing" },
+                    { role: "Product Manager", description: "Roadmap & prioritization", category: "Management & Strategy" },
+                    { role: "DevOps Engineer", description: "CI/CD, infrastructure, scaling", category: "Management & Strategy" }
+                ],
+                teamSize: "12-person dedicated team",
+                included: [
+                    "Everything in Essentials, PLUS:",
+                    "Daily standups & bi-weekly sprint reviews",
+                    "Dedicated communication channel with team",
+                    "Advanced analytics & data dashboards",
+                    "A/B testing & conversion optimization",
+                    "Priority support (24/5 coverage)",
+                    "Quarterly strategy sessions",
+                    "Cloud infrastructure management"
+                ],
+                perfectFor: [
+                    "Scaling SaaS products",
+                    "Multi-channel marketing campaigns",
+                    "Complex web/mobile applications",
+                    "Rapid feature development",
+                    "Enterprise-level projects"
+                ]
+            }
+        ],
+        comparisonHighlights: [
+            { feature: "Team Size", essentials: "5 specialists", fullTeam: "12 specialists" },
+            { feature: "Development", essentials: "1 Full-Stack Dev + QA", fullTeam: "3 Developers + QA + DevOps" },
+            { feature: "Design", essentials: "1 Designer", fullTeam: "2 Designers (UI/UX + Graphics)" },
+            { feature: "Marketing", essentials: "2 Specialists", fullTeam: "3 Specialists + Manager" },
+            { feature: "Product Management", essentials: false, fullTeam: true },
+            { feature: "DevOps & Infrastructure", essentials: false, fullTeam: true },
+            { feature: "Support Hours", essentials: "Mon-Fri, 9-6", fullTeam: "24/5 Priority" },
+            { feature: "Sprint Cadence", essentials: "Weekly updates", fullTeam: "Daily standups + Bi-weekly sprints" },
+            { feature: "Best For", essentials: "MVPs & Small Projects", fullTeam: "Growth & Complex Products" }
+        ],
+        painPoints: {
+            headline: "Stop Drowning in Hiring Costs & Headaches",
+            salaryBreakdown: [
+                { role: "Full-Stack Developer", range: "$5,000 - $10,000" },
+                { role: "UI/UX Designer", range: "$4,000 - $8,000" },
+                { role: "QA Engineer", range: "$3,500 - $6,000" },
+                { role: "Content Writer", range: "$3,000 - $5,000" },
+                { role: "Digital Marketer", range: "$4,000 - $7,000" }
+            ],
+            totalSalaries: "$19,500 - $36,000/month",
+            hiddenCosts: [
+                { item: "Recruitment fees", cost: "$5,000 - $15,000 per hire" },
+                { item: "Benefits & insurance", cost: "20-30% of salaries ($4K-$10K/month)" },
+                { item: "Office space & equipment", cost: "$500 - $2,000/person" },
+                { item: "Software licenses", cost: "$500 - $2,000/month" },
+                { item: "Training & onboarding", cost: "$2,000 - $5,000/person" },
+                { item: "Payroll taxes", cost: "7-10% of salaries" },
+                { item: "Management overhead", cost: "Your time managing 5-10 people" },
+                { item: "Employee turnover", cost: "Average 18% annually = restart the cycle" }
+            ],
+            grandTotal: "$25K - $50K+/month + 2-6 months to build",
+            headaches: [
+                "Managing multiple personalities and schedules",
+                "Constant turnover and re-training",
+                "Scheduling nightmares and coordination",
+                "Skill gaps when someone leaves",
+                "Months wasted on recruiting"
+            ],
+            qorbBenefits: [
+                "One fixed monthly fee (Save 70-90%)",
+                "Fully managed team (Zero management overhead)",
+                "Ready in 48 hours (Not months)",
+                "Zero turnover risk (We handle replacements)",
+                "Senior-level expertise across all domains"
+            ]
+        },
+        faq: [
+            {
+                question: "How much does it cost?",
+                answer: "Pricing depends on your specific needs and team configuration. Contact us for a custom quote tailored to your business goals."
+            },
+            {
+                question: "How quickly can my team start?",
+                answer: "Your dedicated team can be deployed within 48-72 hours after the onboarding call."
+            },
+            {
+                question: "Can I customize the team composition?",
+                answer: "Absolutely! We can tailor any package to your specific needs—add or remove specialists based on your requirements."
+            },
+            {
+                question: "Do I need to sign a long-term contract?",
+                answer: "We offer flexible engagement models. Discuss your preferred terms during consultation."
+            },
+            {
+                question: "Who manages the team?",
+                answer: "We do! We assign a project manager who coordinates all team members and keeps you updated."
+            },
+            {
+                question: "How do you ensure quality?",
+                answer: "All team members are senior-level with 5+ years of experience. We use agile methodology with regular reviews and QA processes."
+            },
+            {
+                question: "What if I need to scale up or add more skills?",
+                answer: "Easy! We can scale your team up or down, and add specialists on-demand based on your evolving needs."
+            },
+            {
+                question: "How does communication work?",
+                answer: "We integrate with your preferred communication tools and workflows. Full transparency and regular updates guaranteed."
             }
         ]
     }
