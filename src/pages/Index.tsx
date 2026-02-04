@@ -15,6 +15,8 @@ import SmoothFollower from '@/components/effects/SmoothFollower';
 import InHouseAdvantageSection from '@/components/sections/InHouseAdvantageSection';
 import ClientsMarquee from '@/components/sections/ClientsMarquee';
 import OurWorkSection from '@/components/sections/OurWorkSection';
+import InHousePartnerSection from '@/components/sections/InHousePartnerSection';
+import CostComparisonSection from '@/components/sections/CostComparisonSection';
 import SEO from '@/components/SEO';
 import { seoMetadata } from '@/lib/content';
 
@@ -67,6 +69,8 @@ const Index = () => {
         <HeroSection />
         <ClientsMarquee />
         <InHouseAdvantageSection />
+        <InHousePartnerSection />
+        <CostComparisonSection />
         <ServicesSection />
         <OurWorkSection />
         <WhyChooseSection />

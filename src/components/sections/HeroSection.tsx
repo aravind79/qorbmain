@@ -40,12 +40,14 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-4 sm:mb-6"
+              className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] mb-3 sm:mb-5"
             >
-              <span className="text-foreground">One Partner,</span>
+              <span className="text-foreground">Your Dedicated </span>
+              <span className="text-primary">In-House</span>
               <br />
-              <span className="text-primary">Infinite</span>
-              <span className="text-foreground"> Solutions</span>
+              <span className="text-foreground">Tech & Marketing Team,</span>
+              <br />
+              <span className="text-foreground">Without the Overhead</span>
             </motion.h1>
 
             {/* Description */}
@@ -53,12 +55,9 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8 max-w-md mx-auto lg:mx-0"
+              className="text-sm text-muted-foreground leading-relaxed mb-4 sm:mb-6 max-w-md mx-auto lg:mx-0"
             >
-              Your ultimate AI technology partner, from concept to launch.
-              <span className="hidden sm:inline"><br /></span>
-              <span className="sm:hidden"> </span>
-              That adapts and learns your business needs for personalized solutions.
+              Scale your business with a full-stack technology and marketing partner that works as an extension of your team
             </motion.p>
 
             {/* Trust Indicators */}
@@ -89,12 +88,12 @@ const HeroSection = () => {
               transition={{ duration: 0.4, delay: 0.35 }}
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4"
             >
-              <Link to="/contact" className="w-full sm:w-auto">
+              <Link to="/pricing" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
                 >
-                  Get Free Consultation
+                  Build Your Team
                 </Button>
               </Link>
               <Link to="/services" className="w-full sm:w-auto">
@@ -103,7 +102,7 @@ const HeroSection = () => {
                   size="lg"
                   className="w-full text-foreground hover:text-primary font-medium group py-5 sm:py-6"
                 >
-                  Explore Services
+                  See How It Works
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
