@@ -44,7 +44,7 @@ const Header = () => {
               whileHover={{ scale: 1.05 }}
               className="relative"
             >
-              <img src="/logo.png" alt="QORB" className="h-20 md:h-24 w-auto object-contain" />
+              <img src="/new-logo.png" alt="QORB" className="h-20 md:h-24 w-auto object-contain" />
             </motion.div>
           </Link>
 

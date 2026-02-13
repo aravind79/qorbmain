@@ -55,8 +55,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-12 border-b border-primary-foreground/10">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link to="/" className="inline-block mb-6">
-              <img src="/footer-logo.png" alt="QORB" className="h-24 md:h-32 w-auto object-contain" />
+            <Link to="/" className="inline-block mb-6 bg-white rounded-xl px-4 py-2">
+              <img src="/new-logo.png" alt="QORB" className="h-20 md:h-24 w-auto object-contain" />
             </Link>
             <p className="text-primary-foreground/60 text-sm mb-6">
               Intelligent Solutions for Modern Businesses

@@ -14,6 +14,7 @@ import BlogPost from "./pages/BlogPost";
 import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
 import Pricing from "./pages/Pricing";
+import Brochure from "./pages/Brochure";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/admin/Login";
 import AdminLayout from "./components/admin/AdminLayout";
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/services" element={<Services />} />
             <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/pricing" element={<Pricing />} />
+            <Route path="/brochure" element={<Brochure />} />
 
             {/* Admin Routes */}
             <Route path="/admin/login" element={<Login />} />
