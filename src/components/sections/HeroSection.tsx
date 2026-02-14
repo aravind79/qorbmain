@@ -33,7 +33,7 @@ const HeroSection = () => {
       />
 
       {/* Content container */}
-      <div className="container-custom relative z-20 py-16 sm:py-20 lg:py-32">
+      <div className="container-custom relative z-20 pt-32 pb-24 sm:pt-40 sm:pb-32 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center">
           {/* Left Content */}
           <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
