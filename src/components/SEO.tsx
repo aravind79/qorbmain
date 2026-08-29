@@ -14,7 +14,7 @@ const SEO = ({
     title,
     description,
     keywords,
-    ogImage = '/og-image.jpg',
+    ogImage = '/new-logo.png',
     canonicalUrl,
     type = 'website',
     structuredData
